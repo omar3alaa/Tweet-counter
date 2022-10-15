@@ -16,7 +16,7 @@ class TweetCounterManager: TweetCounterManagerProtocol {
     }
     
     func getTweetCountFor(tweet: String) -> Int {
-        var tweet = tweet
+        var tweet = tweet.lowercased()
         var charactersCount = 0
         let whiteSpacesCount = getWhiteSpacesCountIn(tweet: tweet)
         let totalUrlsCharactersCount = removeUrlsFrom(tweet: &tweet)
