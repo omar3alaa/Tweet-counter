@@ -14,6 +14,7 @@ class TweetCounterView: UIView {
     
     // MARK: - Outlets
     @IBOutlet private var containerView: UIView!
+    @IBOutlet private weak var twitterLogoImageView: UIImageView!
     @IBOutlet private weak var typedCharactersLabel: UILabel!
     @IBOutlet private weak var remainingCharactersLabel: UILabel!
     @IBOutlet private weak var textView: UITextView!
@@ -40,7 +41,7 @@ class TweetCounterView: UIView {
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        setupNormalLabelColors()
+        setupColors()
     }
 }
 
@@ -59,8 +60,30 @@ private extension TweetCounterView {
     }
     
     func setupView() {
+        setupTextView()
+        setupColors()
+    }
+    
+    func setupTextView() {
         textView.contentInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-        textView.placeholder = "Start typing! You can enter up to 280 characters"
+    }
+    
+    func setupColors() {
+        setupLabelsColors()
+        setupTwitterLogoColor()
+    }
+    
+    func setupLabelsColors() {
+        let userInterfaceStyle = traitCollection.userInterfaceStyle
+        let color: UIColor = userInterfaceStyle == .dark ? .white : .black
+        remainingCharactersLabel.textColor = color
+        typedCharactersLabel.textColor = color
+    }
+    
+    func setupTwitterLogoColor() {
+        let userInterfaceStyle = traitCollection.userInterfaceStyle
+        let color: UIColor = userInterfaceStyle == .dark ? .white : UIColor(hexString: "#03A9F4")
+        twitterLogoImageView.tintColor = color
     }
     
     func setupViewModel() {
@@ -79,7 +102,7 @@ private extension TweetCounterView {
                 strongSelf.remainingCharactersLabel.textColor = color
                 strongSelf.typedCharactersLabel.textColor = color
             } else {
-                strongSelf.setupNormalLabelColors()
+                strongSelf.setupLabelsColors()
             }
         }).disposed(by: disposeBag)
         viewModel?.output.playErrorFeedback.throttle(.seconds(1), latest: false).drive(onNext: { _ in
@@ -91,18 +114,15 @@ private extension TweetCounterView {
             strongSelf.remainingCharactersLabel.shake(duration: 1)
             strongSelf.typedCharactersLabel.shake(duration: 1)
         }).disposed(by: disposeBag)
+        viewModel?.output.textViewPlaceholder.drive(onNext: { [weak self] placeholder in
+            guard let strongSelf = self else { return }
+            strongSelf.textView.placeholder = placeholder
+        }).disposed(by: disposeBag)
     }
     
     func bindViewModel() {
         guard let viewModel = viewModel else { return }
         textView.rx.text.asDriver().drive(viewModel.input.tweetText).disposed(by: disposeBag)
-    }
-    
-    func setupNormalLabelColors() {
-        let userInterfaceStyle = traitCollection.userInterfaceStyle
-        let color: UIColor = userInterfaceStyle == .dark ? .white : .black
-        remainingCharactersLabel.textColor = color
-        typedCharactersLabel.textColor = color
     }
 }
 

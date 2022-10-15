@@ -21,6 +21,7 @@
                 <outlet property="containerView" destination="iN0-l3-epB" id="zVE-f0-wj8"/>
                 <outlet property="remainingCharactersLabel" destination="mrT-eH-SZ7" id="ZMW-4P-c5V"/>
                 <outlet property="textView" destination="IpC-UN-ZA5" id="Qof-TX-WZB"/>
+                <outlet property="twitterLogoImageView" destination="q0k-Io-0bS" id="G6b-Vf-3RH"/>
                 <outlet property="typedCharactersLabel" destination="Kf8-eb-Ix2" id="p4k-oP-DSa"/>
             </connections>
         </placeholder>

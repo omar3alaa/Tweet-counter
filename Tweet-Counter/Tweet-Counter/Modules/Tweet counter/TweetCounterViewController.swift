@@ -11,7 +11,7 @@ class TweetCounterViewController: UIViewController {
 
     // MARK: Outlets
     @IBOutlet private weak var tweetCounterView: TweetCounterView!
-    @IBOutlet private weak var darkModeIcon: UIImageView!
+    @IBOutlet private weak var darkModeIconImageView: UIImageView!
     @IBOutlet private weak var darkModeSwitch: UISwitch!
 
     // MARK: Life cycle
@@ -46,7 +46,7 @@ private extension TweetCounterViewController {
     
     func setupViewUpon(userInterfaceStyle: UIUserInterfaceStyle) {
         let isDarkMode = userInterfaceStyle == .dark
-        darkModeIcon.tintColor = isDarkMode ? .white : UIColor(hexString: "#FDB813")
+        darkModeIconImageView.tintColor = isDarkMode ? .white : UIColor(hexString: "#FDB813")
         darkModeSwitch.isOn = isDarkMode
     }
 }

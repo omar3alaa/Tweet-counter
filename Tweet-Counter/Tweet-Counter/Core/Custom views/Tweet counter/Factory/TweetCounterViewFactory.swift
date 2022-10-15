@@ -10,7 +10,8 @@ import UIKit
 
 class TweetCounterViewModelFactory {
     func initTweetCounterViewModel() -> TweetCounterViewModel {
-        let viewModel = TweetCounterViewModel()
+        let tweetCounterManager = TweetCounterManager()
+        let viewModel = TweetCounterViewModel(tweetCounterManager: tweetCounterManager)
         return viewModel
     }
 }
