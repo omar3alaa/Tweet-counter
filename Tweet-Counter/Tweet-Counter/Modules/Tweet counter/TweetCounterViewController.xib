@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArbFONTS-DINNextLTArabic-Bold-2.ttf">
+            <string>DINNextLTArabic-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TweetCounterViewController" customModule="Tweet_Counter" customModuleProvider="target">
+            <connections>
+                <outlet property="darkModeIcon" destination="nXJ-ma-PcA" id="WnS-3z-gCg"/>
+                <outlet property="darkModeSwitch" destination="qtO-yA-mU0" id="kea-7r-0XA"/>
+                <outlet property="tweetCounterView" destination="EVk-dn-TGI" id="3hO-Bq-Hol"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVk-dn-TGI" customClass="TweetCounterView" customModule="Tweet_Counter" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="47" width="390" height="422"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChQ-a5-lXd">
+                    <rect key="frame" x="16" y="730" width="358" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-iU-D76" userLabel="Dark Mode">
+                            <rect key="frame" x="34.999999999999993" y="9.6666666666666288" width="99.333333333333314" height="40.666666666666664"/>
+                            <fontDescription key="fontDescription" name="DINNextLTArabic-Bold" family="DIN Next LT Arabic" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkModeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="nXJ-ma-PcA">
+                            <rect key="frame" x="0.0" y="20.333333333333371" width="30" height="30"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="IbL-q3-mpZ"/>
+                                <constraint firstAttribute="width" constant="30" id="x61-hi-1KQ"/>
+                            </constraints>
+                        </imageView>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtO-yA-mU0">
+                            <rect key="frame" x="309" y="14.666666666666629" width="51" height="31"/>
+                            <connections>
+                                <action selector="didToggleDarkMode:" destination="-1" eventType="valueChanged" id="pbl-7O-rkV"/>
+                            </connections>
+                        </switch>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="nXJ-ma-PcA" firstAttribute="leading" secondItem="ChQ-a5-lXd" secondAttribute="leading" id="8b3-bX-v38"/>
+                        <constraint firstItem="rnj-iU-D76" firstAttribute="leading" secondItem="nXJ-ma-PcA" secondAttribute="trailing" constant="5" id="Ixj-9p-NyF"/>
+                        <constraint firstAttribute="trailing" secondItem="qtO-yA-mU0" secondAttribute="trailing" id="PwP-eo-TzS"/>
+                        <constraint firstItem="nXJ-ma-PcA" firstAttribute="centerY" secondItem="rnj-iU-D76" secondAttribute="centerY" multiplier="1.18" id="YAi-x1-uqE"/>
+                        <constraint firstItem="qtO-yA-mU0" firstAttribute="centerY" secondItem="ChQ-a5-lXd" secondAttribute="centerY" id="bDC-33-bCY"/>
+                        <constraint firstItem="nXJ-ma-PcA" firstAttribute="bottom" secondItem="rnj-iU-D76" secondAttribute="bottom" id="etp-Dd-Xwx"/>
+                        <constraint firstItem="qtO-yA-mU0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rnj-iU-D76" secondAttribute="trailing" constant="10" id="fNK-XI-5bf"/>
+                        <constraint firstAttribute="height" constant="60" id="tp2-IC-xld"/>
+                        <constraint firstItem="rnj-iU-D76" firstAttribute="centerY" secondItem="ChQ-a5-lXd" secondAttribute="centerY" id="wwD-nn-45m"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ChQ-a5-lXd" secondAttribute="trailing" constant="16" id="5sS-Sd-IUt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EVk-dn-TGI" secondAttribute="trailing" id="IIw-gV-cvt"/>
+                <constraint firstItem="EVk-dn-TGI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Iyp-Up-B8j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ChQ-a5-lXd" secondAttribute="bottom" constant="20" id="Sh4-Yw-lpn"/>
+                <constraint firstItem="ChQ-a5-lXd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VNb-54-ctn"/>
+                <constraint firstItem="EVk-dn-TGI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fVA-0H-u7S"/>
+                <constraint firstItem="EVk-dn-TGI" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="z7r-bg-MzS"/>
+            </constraints>
+            <point key="canvasLocation" x="68" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="darkModeIcon" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
