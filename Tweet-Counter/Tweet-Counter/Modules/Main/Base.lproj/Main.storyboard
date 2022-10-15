@@ -16,8 +16,20 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oz1-zt-ZWG" customClass="TweetCounterView" customModule="Tweet_Counter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="47" width="390" height="422"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oz1-zt-ZWG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="9aZ-PX-ZwP"/>
+                            <constraint firstItem="Oz1-zt-ZWG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="G6J-RD-6L7"/>
+                            <constraint firstItem="Oz1-zt-ZWG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HM4-Dy-0nV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oz1-zt-ZWG" secondAttribute="trailing" id="TLg-nd-A68"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
