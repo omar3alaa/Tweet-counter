@@ -7,12 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1403411B28FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410628FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf */; };
+		1403411C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-2.ttf */; };
+		1403411D28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410828FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-3.ttf */; };
+		1403411E28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-4.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410928FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-4.ttf */; };
+		1403411F28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy2-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy2-1.ttf */; };
+		1403412028FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410B28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-2.ttf */; };
+		1403412128FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-2.ttf */; };
+		1403412228FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy2-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410D28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy2-2.ttf */; };
+		1403412328FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-4.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410E28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-4.ttf */; };
+		1403412428FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-4.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410F28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-4.ttf */; };
+		1403412528FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411028FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy-1.ttf */; };
+		1403412628FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-2-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411128FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-2-2.ttf */; };
+		1403412728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411228FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-3.ttf */; };
+		1403412828FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411328FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-3.ttf */; };
+		1403412928FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-4.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411428FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-4.ttf */; };
+		1403412A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411528FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-3.ttf */; };
+		1403412B28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-4.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411628FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-4.ttf */; };
+		1403412C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-1.ttf */; };
+		1403412D28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411828FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-2.ttf */; };
+		1403412E28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411928FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-3.ttf */; };
+		1403412F28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf */; };
+		1403413228FAA11500C1311D /* UIVIew+IBInspectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403413128FAA11500C1311D /* UIVIew+IBInspectables.swift */; };
+		1403413528FAB35000C1311D /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403413428FAB35000C1311D /* UIColor+Hex.swift */; };
 		14E3605728F9F35E005EA69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3605628F9F35E005EA69D /* AppDelegate.swift */; };
 		14E3605B28F9F35E005EA69D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3605A28F9F35E005EA69D /* ViewController.swift */; };
 		14E3605E28F9F35E005EA69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E3605C28F9F35E005EA69D /* Main.storyboard */; };
 		14E3606028F9F360005EA69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14E3605F28F9F360005EA69D /* Assets.xcassets */; };
 		14E3606328F9F360005EA69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E3606128F9F360005EA69D /* LaunchScreen.storyboard */; };
 		14E3606E28F9F360005EA69D /* Tweet_CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3606D28F9F360005EA69D /* Tweet_CounterTests.swift */; };
+		14F5F9BB28FA993400E99AD4 /* TweetCounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F5F9BA28FA993400E99AD4 /* TweetCounterView.xib */; };
+		14F5F9BD28FA994000E99AD4 /* TweetCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5F9BC28FA994000E99AD4 /* TweetCounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +51,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1403410628FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf"; sourceTree = "<group>"; };
+		1403410728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Bold-2.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Bold-2.ttf"; sourceTree = "<group>"; };
+		1403410828FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Black-3.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Black-3.ttf"; sourceTree = "<group>"; };
+		1403410928FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-4.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Regular-4.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Regular-4.ttf"; sourceTree = "<group>"; };
+		1403410A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy2-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Heavy2-1.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Heavy2-1.ttf"; sourceTree = "<group>"; };
+		1403410B28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Medium-2.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Medium-2.ttf"; sourceTree = "<group>"; };
+		1403410C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Regular-2.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Regular-2.ttf"; sourceTree = "<group>"; };
+		1403410D28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy2-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Heavy2-2.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Heavy2-2.ttf"; sourceTree = "<group>"; };
+		1403410E28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-4.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Bold-4.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Bold-4.ttf"; sourceTree = "<group>"; };
+		1403410F28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-4.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Black-4.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Black-4.ttf"; sourceTree = "<group>"; };
+		1403411028FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Heavy-1.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Heavy-1.ttf"; sourceTree = "<group>"; };
+		1403411128FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-2-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNEXTLTARABIC-LIGHT-2-2.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNEXTLTARABIC-LIGHT-2-2.ttf"; sourceTree = "<group>"; };
+		1403411228FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Regular-3.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Regular-3.ttf"; sourceTree = "<group>"; };
+		1403411328FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-UltraLight-3.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-UltraLight-3.ttf"; sourceTree = "<group>"; };
+		1403411428FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-4.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-UltraLight-4.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-UltraLight-4.ttf"; sourceTree = "<group>"; };
+		1403411528FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Medium-3.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Medium-3.ttf"; sourceTree = "<group>"; };
+		1403411628FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-4.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Medium-4.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Medium-4.ttf"; sourceTree = "<group>"; };
+		1403411728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-UltraLight-1.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-UltraLight-1.ttf"; sourceTree = "<group>"; };
+		1403411828FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-UltraLight-2.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-UltraLight-2.ttf"; sourceTree = "<group>"; };
+		1403411928FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Bold-3.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Bold-3.ttf"; sourceTree = "<group>"; };
+		1403411A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNextLTArabic-Black-2.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNextLTArabic-Black-2.ttf"; sourceTree = "<group>"; };
+		1403413128FAA11500C1311D /* UIVIew+IBInspectables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+IBInspectables.swift"; sourceTree = "<group>"; };
+		1403413428FAB35000C1311D /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		14E3605328F9F35E005EA69D /* Tweet-Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tweet-Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E3605628F9F35E005EA69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14E3605A28F9F35E005EA69D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +83,8 @@
 		14E3606428F9F360005EA69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14E3606928F9F360005EA69D /* Tweet-CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tweet-CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E3606D28F9F360005EA69D /* Tweet_CounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet_CounterTests.swift; sourceTree = "<group>"; };
+		14F5F9BA28FA993400E99AD4 /* TweetCounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetCounterView.xib; sourceTree = "<group>"; };
+		14F5F9BC28FA994000E99AD4 /* TweetCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +105,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1403410528FA9E9400C1311D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1403411A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf */,
+				1403410828FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-3.ttf */,
+				1403410F28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-4.ttf */,
+				1403410728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-2.ttf */,
+				1403411928FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-3.ttf */,
+				1403410E28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-4.ttf */,
+				1403411028FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy-1.ttf */,
+				1403410A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy2-1.ttf */,
+				1403410D28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy2-2.ttf */,
+				1403410628FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf */,
+				1403411128FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-2-2.ttf */,
+				1403410B28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-2.ttf */,
+				1403411528FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-3.ttf */,
+				1403411628FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-4.ttf */,
+				1403410C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-2.ttf */,
+				1403411228FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-3.ttf */,
+				1403410928FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-4.ttf */,
+				1403411728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-1.ttf */,
+				1403411828FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-2.ttf */,
+				1403411328FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-3.ttf */,
+				1403411428FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-4.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1403413028FAA0F000C1311D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1403413128FAA11500C1311D /* UIVIew+IBInspectables.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1403413328FAB33900C1311D /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				1403413428FAB35000C1311D /* UIColor+Hex.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
 		14E3604A28F9F35E005EA69D = {
 			isa = PBXGroup;
 			children = (
@@ -76,12 +170,10 @@
 		14E3605528F9F35E005EA69D /* Tweet-Counter */ = {
 			isa = PBXGroup;
 			children = (
-				14E3605628F9F35E005EA69D /* AppDelegate.swift */,
-				14E3605A28F9F35E005EA69D /* ViewController.swift */,
-				14E3605C28F9F35E005EA69D /* Main.storyboard */,
-				14E3605F28F9F360005EA69D /* Assets.xcassets */,
-				14E3606128F9F360005EA69D /* LaunchScreen.storyboard */,
-				14E3606428F9F360005EA69D /* Info.plist */,
+				14F5F9B728FA991300E99AD4 /* Helpers */,
+				14F5F9B528FA98FB00E99AD4 /* Modules */,
+				14F5F9B128FA98B800E99AD4 /* Resources */,
+				14F5F9B028FA98AE00E99AD4 /* Core */,
 			);
 			path = "Tweet-Counter";
 			sourceTree = "<group>";
@@ -92,6 +184,93 @@
 				14E3606D28F9F360005EA69D /* Tweet_CounterTests.swift */,
 			);
 			path = "Tweet-CounterTests";
+			sourceTree = "<group>";
+		};
+		14F5F9B028FA98AE00E99AD4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				14E3605628F9F35E005EA69D /* AppDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		14F5F9B128FA98B800E99AD4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1403410528FA9E9400C1311D /* Fonts */,
+				14F5F9B428FA98EE00E99AD4 /* Plist files */,
+				14F5F9B328FA98CF00E99AD4 /* Xibs */,
+				14F5F9B228FA98C200E99AD4 /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		14F5F9B228FA98C200E99AD4 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				14E3605F28F9F360005EA69D /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		14F5F9B328FA98CF00E99AD4 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				14E3606128F9F360005EA69D /* LaunchScreen.storyboard */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
+		14F5F9B428FA98EE00E99AD4 /* Plist files */ = {
+			isa = PBXGroup;
+			children = (
+				14E3606428F9F360005EA69D /* Info.plist */,
+			);
+			path = "Plist files";
+			sourceTree = "<group>";
+		};
+		14F5F9B528FA98FB00E99AD4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				14F5F9B628FA990100E99AD4 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		14F5F9B628FA990100E99AD4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				14E3605C28F9F35E005EA69D /* Main.storyboard */,
+				14E3605A28F9F35E005EA69D /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		14F5F9B728FA991300E99AD4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				14F5F9B928FA991E00E99AD4 /* Extensions */,
+				14F5F9B828FA991800E99AD4 /* Custom views */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		14F5F9B828FA991800E99AD4 /* Custom views */ = {
+			isa = PBXGroup;
+			children = (
+				14F5F9BA28FA993400E99AD4 /* TweetCounterView.xib */,
+				14F5F9BC28FA994000E99AD4 /* TweetCounterView.swift */,
+			);
+			path = "Custom views";
+			sourceTree = "<group>";
+		};
+		14F5F9B928FA991E00E99AD4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1403413328FAB33900C1311D /* Colors */,
+				1403413028FAA0F000C1311D /* View */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +354,31 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1403412228FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy2-2.ttf in Resources */,
+				1403412F28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf in Resources */,
+				1403412428FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-4.ttf in Resources */,
+				1403412328FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-4.ttf in Resources */,
+				1403412128FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-2.ttf in Resources */,
+				1403412C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-1.ttf in Resources */,
+				1403412E28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-3.ttf in Resources */,
+				1403411D28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-3.ttf in Resources */,
 				14E3606328F9F360005EA69D /* LaunchScreen.storyboard in Resources */,
+				1403412D28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-2.ttf in Resources */,
+				1403411E28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-4.ttf in Resources */,
+				14F5F9BB28FA993400E99AD4 /* TweetCounterView.xib in Resources */,
+				1403411C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-2.ttf in Resources */,
+				1403412928FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-4.ttf in Resources */,
+				1403412728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-3.ttf in Resources */,
+				1403412A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-3.ttf in Resources */,
+				1403412828FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-3.ttf in Resources */,
 				14E3606028F9F360005EA69D /* Assets.xcassets in Resources */,
+				1403411F28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy2-1.ttf in Resources */,
 				14E3605E28F9F35E005EA69D /* Main.storyboard in Resources */,
+				1403412028FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-2.ttf in Resources */,
+				1403412628FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-2-2.ttf in Resources */,
+				1403412B28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-4.ttf in Resources */,
+				1403411B28FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf in Resources */,
+				1403412528FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy-1.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,8 +396,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14F5F9BD28FA994000E99AD4 /* TweetCounterView.swift in Sources */,
+				1403413228FAA11500C1311D /* UIVIew+IBInspectables.swift in Sources */,
 				14E3605B28F9F35E005EA69D /* ViewController.swift in Sources */,
 				14E3605728F9F35E005EA69D /* AppDelegate.swift in Sources */,
+				1403413528FAB35000C1311D /* UIColor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +564,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Tweet-Counter/Info.plist";
+				INFOPLIST_FILE = "Tweet-Counter/Resources/Plist files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -386,7 +590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Tweet-Counter/Info.plist";
+				INFOPLIST_FILE = "Tweet-Counter/Resources/Plist files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
