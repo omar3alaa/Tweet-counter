@@ -30,6 +30,8 @@
 		1403412F28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf */; };
 		1403413228FAA11500C1311D /* UIVIew+IBInspectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403413128FAA11500C1311D /* UIVIew+IBInspectables.swift */; };
 		1403413528FAB35000C1311D /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403413428FAB35000C1311D /* UIColor+Hex.swift */; };
+		1403417B28FABC1500C1311D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1403417A28FABC1500C1311D /* RxSwift */; };
+		1403417D28FABC2200C1311D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1403417C28FABC2200C1311D /* RxCocoa */; };
 		14E3605728F9F35E005EA69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3605628F9F35E005EA69D /* AppDelegate.swift */; };
 		14E3605B28F9F35E005EA69D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3605A28F9F35E005EA69D /* ViewController.swift */; };
 		14E3605E28F9F35E005EA69D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E3605C28F9F35E005EA69D /* Main.storyboard */; };
@@ -49,6 +51,19 @@
 			remoteInfo = "Tweet-Counter";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1403417028FABB8700C1311D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1403410628FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf"; path = "../../../../../../Helpers/Used font/ArbFonts.com-(21)/ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf"; sourceTree = "<group>"; };
@@ -92,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1403417D28FABC2200C1311D /* RxCocoa in Frameworks */,
+				1403417B28FABC1500C1311D /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,12 +166,20 @@
 			path = Colors;
 			sourceTree = "<group>";
 		};
+		1403416228FABB4600C1311D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		14E3604A28F9F35E005EA69D = {
 			isa = PBXGroup;
 			children = (
 				14E3605528F9F35E005EA69D /* Tweet-Counter */,
 				14E3606C28F9F360005EA69D /* Tweet-CounterTests */,
 				14E3605428F9F35E005EA69D /* Products */,
+				1403416228FABB4600C1311D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -283,12 +308,17 @@
 				14E3604F28F9F35E005EA69D /* Sources */,
 				14E3605028F9F35E005EA69D /* Frameworks */,
 				14E3605128F9F35E005EA69D /* Resources */,
+				1403417028FABB8700C1311D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Tweet-Counter";
+			packageProductDependencies = (
+				1403417A28FABC1500C1311D /* RxSwift */,
+				1403417C28FABC2200C1311D /* RxCocoa */,
+			);
 			productName = "Tweet-Counter";
 			productReference = 14E3605328F9F35E005EA69D /* Tweet-Counter.app */;
 			productType = "com.apple.product-type.application";
@@ -339,6 +369,9 @@
 				Base,
 			);
 			mainGroup = 14E3604A28F9F35E005EA69D;
+			packageReferences = (
+				1403415B28FABACE00C1311D /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 14E3605428F9F35E005EA69D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -478,6 +511,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -538,6 +572,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -563,6 +598,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Tweet-Counter/Resources/Plist files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -589,6 +625,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Tweet-Counter/Resources/Plist files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -677,6 +714,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1403415B28FABACE00C1311D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1403417A28FABC1500C1311D /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1403415B28FABACE00C1311D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		1403417C28FABC2200C1311D /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1403415B28FABACE00C1311D /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 14E3604B28F9F35E005EA69D /* Project object */;
 }
