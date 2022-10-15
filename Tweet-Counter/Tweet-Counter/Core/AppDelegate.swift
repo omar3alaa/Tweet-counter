@@ -12,10 +12,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
-        guard let mainViewController = mainStoryboard.instantiateInitialViewController() else { return false }
+        let tweetCounterViewController = TweetCounterViewController()
         let window = UIWindow()
-        setUpWindow(window, withRootViewController: mainViewController)
+        setUpWindow(window, withRootViewController: tweetCounterViewController)
         self.window = window
         return true
     }
