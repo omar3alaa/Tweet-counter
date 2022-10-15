@@ -26,6 +26,11 @@
 		1403419828FB058B00C1311D /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403419728FB058B00C1311D /* UIView+Shake.swift */; };
 		1403419A28FB0AD900C1311D /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 1403419928FB0AD900C1311D /* config.json */; };
 		140341A228FB176B00C1311D /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140341A128FB176B00C1311D /* UITextViewPlaceholder.swift */; };
+		140341A628FB42E200C1311D /* TweetCounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140341A528FB42E200C1311D /* TweetCounterManager.swift */; };
+		140341AA28FB430500C1311D /* TweetCounterManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140341A928FB430500C1311D /* TweetCounterManagerProtocol.swift */; };
+		140341AE28FB462400C1311D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140341AD28FB462400C1311D /* Configuration.swift */; };
+		141EE4A828FB509F0045D05A /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EE4A728FB509F0045D05A /* String+Regex.swift */; };
+		141EE4AB28FB5D680045D05A /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EE4AA28FB5D680045D05A /* Regexp.swift */; };
 		14E3605728F9F35E005EA69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3605628F9F35E005EA69D /* AppDelegate.swift */; };
 		14E3606028F9F360005EA69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14E3605F28F9F360005EA69D /* Assets.xcassets */; };
 		14E3606328F9F360005EA69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E3606128F9F360005EA69D /* LaunchScreen.storyboard */; };
@@ -75,6 +80,11 @@
 		1403419728FB058B00C1311D /* UIView+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		1403419928FB0AD900C1311D /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
 		140341A128FB176B00C1311D /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
+		140341A528FB42E200C1311D /* TweetCounterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterManager.swift; sourceTree = "<group>"; };
+		140341A928FB430500C1311D /* TweetCounterManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterManagerProtocol.swift; sourceTree = "<group>"; };
+		140341AD28FB462400C1311D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		141EE4A728FB509F0045D05A /* String+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
+		141EE4AA28FB5D680045D05A /* Regexp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
 		14E3605328F9F35E005EA69D /* Tweet-Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tweet-Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E3605628F9F35E005EA69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14E3605F28F9F360005EA69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -129,12 +139,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		1403413328FAB33900C1311D /* Colors */ = {
+		1403413328FAB33900C1311D /* Color */ = {
 			isa = PBXGroup;
 			children = (
 				1403413428FAB35000C1311D /* UIColor+Hex.swift */,
 			);
-			path = Colors;
+			path = Color;
 			sourceTree = "<group>";
 		};
 		1403416228FABB4600C1311D /* Frameworks */ = {
@@ -147,7 +157,6 @@
 		1403418328FACD9800C1311D /* Tweet counter */ = {
 			isa = PBXGroup;
 			children = (
-				140341A328FB428500C1311D /* Helpers */,
 				1403418F28FAD99B00C1311D /* Factory */,
 				1403418528FACDAC00C1311D /* View model */,
 				1403418428FACDA300C1311D /* Views */,
@@ -229,19 +238,53 @@
 			path = "TextView placeholder";
 			sourceTree = "<group>";
 		};
-		140341A328FB428500C1311D /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		140341A428FB429900C1311D /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				14E3605628F9F35E005EA69D /* AppDelegate.swift */,
 			);
 			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		140341A828FB42F000C1311D /* Tweet counter manager */ = {
+			isa = PBXGroup;
+			children = (
+				140341A528FB42E200C1311D /* TweetCounterManager.swift */,
+				140341A928FB430500C1311D /* TweetCounterManagerProtocol.swift */,
+			);
+			path = "Tweet counter manager";
+			sourceTree = "<group>";
+		};
+		140341AB28FB45E400C1311D /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				140341AD28FB462400C1311D /* Configuration.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		140341AC28FB45F000C1311D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				140341A828FB42F000C1311D /* Tweet counter manager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		141EE4A628FB508B0045D05A /* String */ = {
+			isa = PBXGroup;
+			children = (
+				141EE4A728FB509F0045D05A /* String+Regex.swift */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		141EE4A928FB5D5A0045D05A /* Regexp */ = {
+			isa = PBXGroup;
+			children = (
+				141EE4AA28FB5D680045D05A /* Regexp.swift */,
+			);
+			path = Regexp;
 			sourceTree = "<group>";
 		};
 		14E3604A28F9F35E005EA69D = {
@@ -284,9 +327,9 @@
 		14F5F9B028FA98AE00E99AD4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				140341AC28FB45F000C1311D /* Managers */,
 				14F5F9B828FA991800E99AD4 /* Custom views */,
 				14F5F9B928FA991E00E99AD4 /* Extensions */,
-				1403419228FAF7FD00C1311D /* Json files */,
 				1403419B28FB169000C1311D /* External vendors */,
 				14F5F9B728FA991300E99AD4 /* Helpers */,
 				140341A428FB429900C1311D /* App Delegate */,
@@ -340,6 +383,9 @@
 		14F5F9B728FA991300E99AD4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				141EE4A928FB5D5A0045D05A /* Regexp */,
+				1403419228FAF7FD00C1311D /* Json files */,
+				140341AB28FB45E400C1311D /* Configuration */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -355,8 +401,9 @@
 		14F5F9B928FA991E00E99AD4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				141EE4A628FB508B0045D05A /* String */,
 				1403419328FAF9B500C1311D /* RxSwift */,
-				1403413328FAB33900C1311D /* Colors */,
+				1403413328FAB33900C1311D /* Color */,
 				1403413028FAA0F000C1311D /* View */,
 			);
 			path = Extensions;
@@ -481,12 +528,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				140341A628FB42E200C1311D /* TweetCounterManager.swift in Sources */,
 				14F5F9BD28FA994000E99AD4 /* TweetCounterView.swift in Sources */,
+				140341AA28FB430500C1311D /* TweetCounterManagerProtocol.swift in Sources */,
 				1403418728FACDCC00C1311D /* TweetCounterViewModel.swift in Sources */,
 				1403413228FAA11500C1311D /* UIVIew+IBInspectables.swift in Sources */,
 				140341A228FB176B00C1311D /* UITextViewPlaceholder.swift in Sources */,
 				1403419628FAF9C700C1311D /* Observable+unwrap.swift in Sources */,
+				141EE4A828FB509F0045D05A /* String+Regex.swift in Sources */,
+				140341AE28FB462400C1311D /* Configuration.swift in Sources */,
 				1403418D28FAD89E00C1311D /* TweetCounterViewController.swift in Sources */,
+				141EE4AB28FB5D680045D05A /* Regexp.swift in Sources */,
 				1403419828FB058B00C1311D /* UIView+Shake.swift in Sources */,
 				1403419128FAD9AB00C1311D /* TweetCounterViewFactory.swift in Sources */,
 				14E3605728F9F35E005EA69D /* AppDelegate.swift in Sources */,

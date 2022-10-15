@@ -16,7 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TweetCounterViewController" customModule="Tweet_Counter" customModuleProvider="target">
             <connections>
-                <outlet property="darkModeIcon" destination="nXJ-ma-PcA" id="WnS-3z-gCg"/>
+                <outlet property="darkModeIconImageView" destination="nXJ-ma-PcA" id="oxu-ur-jT9"/>
                 <outlet property="darkModeSwitch" destination="qtO-yA-mU0" id="kea-7r-0XA"/>
                 <outlet property="tweetCounterView" destination="EVk-dn-TGI" id="3hO-Bq-Hol"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
