@@ -7,36 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1403411B28FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410628FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf */; };
-		1403411C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-2.ttf */; };
-		1403412028FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410B28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-2.ttf */; };
-		1403412128FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403410C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-2.ttf */; };
-		1403412528FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411028FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy-1.ttf */; };
-		1403412C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-1.ttf */; };
-		1403412F28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1403411A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf */; };
-		1403413228FAA11500C1311D /* UIVIew+IBInspectables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403413128FAA11500C1311D /* UIVIew+IBInspectables.swift */; };
-		1403413528FAB35000C1311D /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403413428FAB35000C1311D /* UIColor+Hex.swift */; };
-		1403417B28FABC1500C1311D /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1403417A28FABC1500C1311D /* RxSwift */; };
-		1403417D28FABC2200C1311D /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1403417C28FABC2200C1311D /* RxCocoa */; };
-		1403418728FACDCC00C1311D /* TweetCounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403418628FACDCC00C1311D /* TweetCounterViewModel.swift */; };
 		1403418D28FAD89E00C1311D /* TweetCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403418B28FAD89E00C1311D /* TweetCounterViewController.swift */; };
 		1403418E28FAD89E00C1311D /* TweetCounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1403418C28FAD89E00C1311D /* TweetCounterViewController.xib */; };
-		1403419128FAD9AB00C1311D /* TweetCounterViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403419028FAD9AB00C1311D /* TweetCounterViewFactory.swift */; };
-		1403419628FAF9C700C1311D /* Observable+unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403419528FAF9C700C1311D /* Observable+unwrap.swift */; };
-		1403419828FB058B00C1311D /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403419728FB058B00C1311D /* UIView+Shake.swift */; };
-		1403419A28FB0AD900C1311D /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 1403419928FB0AD900C1311D /* config.json */; };
-		140341A228FB176B00C1311D /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140341A128FB176B00C1311D /* UITextViewPlaceholder.swift */; };
-		140341A628FB42E200C1311D /* TweetCounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140341A528FB42E200C1311D /* TweetCounterManager.swift */; };
-		140341AA28FB430500C1311D /* TweetCounterManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140341A928FB430500C1311D /* TweetCounterManagerProtocol.swift */; };
-		140341AE28FB462400C1311D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 140341AD28FB462400C1311D /* Configuration.swift */; };
-		141EE4A828FB509F0045D05A /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EE4A728FB509F0045D05A /* String+Regex.swift */; };
-		141EE4AB28FB5D680045D05A /* Regexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 141EE4AA28FB5D680045D05A /* Regexp.swift */; };
+		142D525628FC01D2004BC011 /* TweetCounterUIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 142D525528FC01D2004BC011 /* TweetCounterUIComponents */; };
 		14E3605728F9F35E005EA69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3605628F9F35E005EA69D /* AppDelegate.swift */; };
 		14E3606028F9F360005EA69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14E3605F28F9F360005EA69D /* Assets.xcassets */; };
 		14E3606328F9F360005EA69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E3606128F9F360005EA69D /* LaunchScreen.storyboard */; };
 		14E3606E28F9F360005EA69D /* Tweet_CounterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3606D28F9F360005EA69D /* Tweet_CounterTests.swift */; };
-		14F5F9BB28FA993400E99AD4 /* TweetCounterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14F5F9BA28FA993400E99AD4 /* TweetCounterView.xib */; };
-		14F5F9BD28FA994000E99AD4 /* TweetCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F5F9BC28FA994000E99AD4 /* TweetCounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,28 +40,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1403410628FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf"; sourceTree = "<group>"; };
-		1403410728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-DINNextLTArabic-Bold-2.ttf"; sourceTree = "<group>"; };
-		1403410B28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-DINNextLTArabic-Medium-2.ttf"; sourceTree = "<group>"; };
-		1403410C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-DINNextLTArabic-Regular-2.ttf"; sourceTree = "<group>"; };
-		1403411028FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-DINNextLTArabic-Heavy-1.ttf"; sourceTree = "<group>"; };
-		1403411728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-DINNextLTArabic-UltraLight-1.ttf"; sourceTree = "<group>"; };
-		1403411A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ArbFONTS-DINNextLTArabic-Black-2.ttf"; sourceTree = "<group>"; };
-		1403413128FAA11500C1311D /* UIVIew+IBInspectables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIVIew+IBInspectables.swift"; sourceTree = "<group>"; };
-		1403413428FAB35000C1311D /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
-		1403418628FACDCC00C1311D /* TweetCounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterViewModel.swift; sourceTree = "<group>"; };
 		1403418B28FAD89E00C1311D /* TweetCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterViewController.swift; sourceTree = "<group>"; };
 		1403418C28FAD89E00C1311D /* TweetCounterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetCounterViewController.xib; sourceTree = "<group>"; };
-		1403419028FAD9AB00C1311D /* TweetCounterViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterViewFactory.swift; sourceTree = "<group>"; };
-		1403419528FAF9C700C1311D /* Observable+unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+unwrap.swift"; sourceTree = "<group>"; };
-		1403419728FB058B00C1311D /* UIView+Shake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
-		1403419928FB0AD900C1311D /* config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = config.json; sourceTree = "<group>"; };
-		140341A128FB176B00C1311D /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
-		140341A528FB42E200C1311D /* TweetCounterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterManager.swift; sourceTree = "<group>"; };
-		140341A928FB430500C1311D /* TweetCounterManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterManagerProtocol.swift; sourceTree = "<group>"; };
-		140341AD28FB462400C1311D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		141EE4A728FB509F0045D05A /* String+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
-		141EE4AA28FB5D680045D05A /* Regexp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regexp.swift; sourceTree = "<group>"; };
+		141EE4AC28FBF2E50045D05A /* TweetCounterUIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TweetCounterUIComponents; sourceTree = "<group>"; };
+		142D525328FC01AF004BC011 /* TweetCounterUIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TweetCounterUIComponents; sourceTree = "<group>"; };
+		142D525428FC01BB004BC011 /* TweetCounterUtilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TweetCounterUtilities; sourceTree = "<group>"; };
 		14E3605328F9F35E005EA69D /* Tweet-Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tweet-Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E3605628F9F35E005EA69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14E3605F28F9F360005EA69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,8 +52,6 @@
 		14E3606428F9F360005EA69D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14E3606928F9F360005EA69D /* Tweet-CounterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tweet-CounterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E3606D28F9F360005EA69D /* Tweet_CounterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet_CounterTests.swift; sourceTree = "<group>"; };
-		14F5F9BA28FA993400E99AD4 /* TweetCounterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetCounterView.xib; sourceTree = "<group>"; };
-		14F5F9BC28FA994000E99AD4 /* TweetCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1403417D28FABC2200C1311D /* RxCocoa in Frameworks */,
-				1403417B28FABC1500C1311D /* RxSwift in Frameworks */,
+				142D525628FC01D2004BC011 /* TweetCounterUIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,69 +73,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1403410528FA9E9400C1311D /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				1403411A28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf */,
-				1403410728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-2.ttf */,
-				1403411028FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy-1.ttf */,
-				1403410628FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf */,
-				1403410B28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-2.ttf */,
-				1403410C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-2.ttf */,
-				1403411728FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-1.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		1403413028FAA0F000C1311D /* View */ = {
-			isa = PBXGroup;
-			children = (
-				1403413128FAA11500C1311D /* UIVIew+IBInspectables.swift */,
-				1403419728FB058B00C1311D /* UIView+Shake.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		1403413328FAB33900C1311D /* Color */ = {
-			isa = PBXGroup;
-			children = (
-				1403413428FAB35000C1311D /* UIColor+Hex.swift */,
-			);
-			path = Color;
-			sourceTree = "<group>";
-		};
 		1403416228FABB4600C1311D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1403418328FACD9800C1311D /* Tweet counter */ = {
-			isa = PBXGroup;
-			children = (
-				1403418F28FAD99B00C1311D /* Factory */,
-				1403418528FACDAC00C1311D /* View model */,
-				1403418428FACDA300C1311D /* Views */,
-			);
-			path = "Tweet counter";
-			sourceTree = "<group>";
-		};
-		1403418428FACDA300C1311D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				14F5F9BC28FA994000E99AD4 /* TweetCounterView.swift */,
-				14F5F9BA28FA993400E99AD4 /* TweetCounterView.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		1403418528FACDAC00C1311D /* View model */ = {
-			isa = PBXGroup;
-			children = (
-				1403418628FACDCC00C1311D /* TweetCounterViewModel.swift */,
-			);
-			path = "View model";
 			sourceTree = "<group>";
 		};
 		1403418A28FAD88100C1311D /* Tweet counter */ = {
@@ -190,54 +89,6 @@
 			path = "Tweet counter";
 			sourceTree = "<group>";
 		};
-		1403418F28FAD99B00C1311D /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				1403419028FAD9AB00C1311D /* TweetCounterViewFactory.swift */,
-			);
-			path = Factory;
-			sourceTree = "<group>";
-		};
-		1403419228FAF7FD00C1311D /* Json files */ = {
-			isa = PBXGroup;
-			children = (
-				1403419928FB0AD900C1311D /* config.json */,
-			);
-			path = "Json files";
-			sourceTree = "<group>";
-		};
-		1403419328FAF9B500C1311D /* RxSwift */ = {
-			isa = PBXGroup;
-			children = (
-				1403419428FAF9B900C1311D /* Observables */,
-			);
-			path = RxSwift;
-			sourceTree = "<group>";
-		};
-		1403419428FAF9B900C1311D /* Observables */ = {
-			isa = PBXGroup;
-			children = (
-				1403419528FAF9C700C1311D /* Observable+unwrap.swift */,
-			);
-			path = Observables;
-			sourceTree = "<group>";
-		};
-		1403419B28FB169000C1311D /* External vendors */ = {
-			isa = PBXGroup;
-			children = (
-				1403419C28FB169D00C1311D /* TextView placeholder */,
-			);
-			path = "External vendors";
-			sourceTree = "<group>";
-		};
-		1403419C28FB169D00C1311D /* TextView placeholder */ = {
-			isa = PBXGroup;
-			children = (
-				140341A128FB176B00C1311D /* UITextViewPlaceholder.swift */,
-			);
-			path = "TextView placeholder";
-			sourceTree = "<group>";
-		};
 		140341A428FB429900C1311D /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,50 +97,20 @@
 			path = "App Delegate";
 			sourceTree = "<group>";
 		};
-		140341A828FB42F000C1311D /* Tweet counter manager */ = {
+		142D525228FC01AF004BC011 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				140341A528FB42E200C1311D /* TweetCounterManager.swift */,
-				140341A928FB430500C1311D /* TweetCounterManagerProtocol.swift */,
+				142D525328FC01AF004BC011 /* TweetCounterUIComponents */,
+				142D525428FC01BB004BC011 /* TweetCounterUtilities */,
 			);
-			path = "Tweet counter manager";
-			sourceTree = "<group>";
-		};
-		140341AB28FB45E400C1311D /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				140341AD28FB462400C1311D /* Configuration.swift */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
-		};
-		140341AC28FB45F000C1311D /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				140341A828FB42F000C1311D /* Tweet counter manager */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		141EE4A628FB508B0045D05A /* String */ = {
-			isa = PBXGroup;
-			children = (
-				141EE4A728FB509F0045D05A /* String+Regex.swift */,
-			);
-			path = String;
-			sourceTree = "<group>";
-		};
-		141EE4A928FB5D5A0045D05A /* Regexp */ = {
-			isa = PBXGroup;
-			children = (
-				141EE4AA28FB5D680045D05A /* Regexp.swift */,
-			);
-			path = Regexp;
+			name = Packages;
 			sourceTree = "<group>";
 		};
 		14E3604A28F9F35E005EA69D = {
 			isa = PBXGroup;
 			children = (
+				142D525228FC01AF004BC011 /* Packages */,
+				141EE4AC28FBF2E50045D05A /* TweetCounterUIComponents */,
 				14E3605528F9F35E005EA69D /* Tweet-Counter */,
 				14E3606C28F9F360005EA69D /* Tweet-CounterTests */,
 				14E3605428F9F35E005EA69D /* Products */,
@@ -327,11 +148,6 @@
 		14F5F9B028FA98AE00E99AD4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				140341AC28FB45F000C1311D /* Managers */,
-				14F5F9B828FA991800E99AD4 /* Custom views */,
-				14F5F9B928FA991E00E99AD4 /* Extensions */,
-				1403419B28FB169000C1311D /* External vendors */,
-				14F5F9B728FA991300E99AD4 /* Helpers */,
 				140341A428FB429900C1311D /* App Delegate */,
 			);
 			path = Core;
@@ -340,7 +156,6 @@
 		14F5F9B128FA98B800E99AD4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1403410528FA9E9400C1311D /* Fonts */,
 				14F5F9B428FA98EE00E99AD4 /* Plist files */,
 				14F5F9B328FA98CF00E99AD4 /* Xibs */,
 				14F5F9B228FA98C200E99AD4 /* Assets */,
@@ -380,35 +195,6 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		14F5F9B728FA991300E99AD4 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				141EE4A928FB5D5A0045D05A /* Regexp */,
-				1403419228FAF7FD00C1311D /* Json files */,
-				140341AB28FB45E400C1311D /* Configuration */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		14F5F9B828FA991800E99AD4 /* Custom views */ = {
-			isa = PBXGroup;
-			children = (
-				1403418328FACD9800C1311D /* Tweet counter */,
-			);
-			path = "Custom views";
-			sourceTree = "<group>";
-		};
-		14F5F9B928FA991E00E99AD4 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				141EE4A628FB508B0045D05A /* String */,
-				1403419328FAF9B500C1311D /* RxSwift */,
-				1403413328FAB33900C1311D /* Color */,
-				1403413028FAA0F000C1311D /* View */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -427,8 +213,7 @@
 			);
 			name = "Tweet-Counter";
 			packageProductDependencies = (
-				1403417A28FABC1500C1311D /* RxSwift */,
-				1403417C28FABC2200C1311D /* RxCocoa */,
+				142D525528FC01D2004BC011 /* TweetCounterUIComponents */,
 			);
 			productName = "Tweet-Counter";
 			productReference = 14E3605328F9F35E005EA69D /* Tweet-Counter.app */;
@@ -482,7 +267,6 @@
 			);
 			mainGroup = 14E3604A28F9F35E005EA69D;
 			packageReferences = (
-				1403415B28FABACE00C1311D /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 14E3605428F9F35E005EA69D /* Products */;
 			projectDirPath = "";
@@ -499,18 +283,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1403412F28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Black-2.ttf in Resources */,
-				1403412128FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Regular-2.ttf in Resources */,
-				1403412C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-UltraLight-1.ttf in Resources */,
 				14E3606328F9F360005EA69D /* LaunchScreen.storyboard in Resources */,
-				1403419A28FB0AD900C1311D /* config.json in Resources */,
-				14F5F9BB28FA993400E99AD4 /* TweetCounterView.xib in Resources */,
-				1403411C28FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Bold-2.ttf in Resources */,
 				1403418E28FAD89E00C1311D /* TweetCounterViewController.xib in Resources */,
 				14E3606028F9F360005EA69D /* Assets.xcassets in Resources */,
-				1403412028FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Medium-2.ttf in Resources */,
-				1403411B28FA9EFC00C1311D /* ArbFONTS-DINNEXTLTARABIC-LIGHT-1.ttf in Resources */,
-				1403412528FA9EFC00C1311D /* ArbFONTS-DINNextLTArabic-Heavy-1.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,21 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				140341A628FB42E200C1311D /* TweetCounterManager.swift in Sources */,
-				14F5F9BD28FA994000E99AD4 /* TweetCounterView.swift in Sources */,
-				140341AA28FB430500C1311D /* TweetCounterManagerProtocol.swift in Sources */,
-				1403418728FACDCC00C1311D /* TweetCounterViewModel.swift in Sources */,
-				1403413228FAA11500C1311D /* UIVIew+IBInspectables.swift in Sources */,
-				140341A228FB176B00C1311D /* UITextViewPlaceholder.swift in Sources */,
-				1403419628FAF9C700C1311D /* Observable+unwrap.swift in Sources */,
-				141EE4A828FB509F0045D05A /* String+Regex.swift in Sources */,
-				140341AE28FB462400C1311D /* Configuration.swift in Sources */,
 				1403418D28FAD89E00C1311D /* TweetCounterViewController.swift in Sources */,
-				141EE4AB28FB5D680045D05A /* Regexp.swift in Sources */,
-				1403419828FB058B00C1311D /* UIView+Shake.swift in Sources */,
-				1403419128FAD9AB00C1311D /* TweetCounterViewFactory.swift in Sources */,
 				14E3605728F9F35E005EA69D /* AppDelegate.swift in Sources */,
-				1403413528FAB35000C1311D /* UIColor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,27 +585,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		1403415B28FABACE00C1311D /* XCRemoteSwiftPackageReference "RxSwift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		1403417A28FABC1500C1311D /* RxSwift */ = {
+		142D525528FC01D2004BC011 /* TweetCounterUIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1403415B28FABACE00C1311D /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
-		};
-		1403417C28FABC2200C1311D /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1403415B28FABACE00C1311D /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
+			productName = TweetCounterUIComponents;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

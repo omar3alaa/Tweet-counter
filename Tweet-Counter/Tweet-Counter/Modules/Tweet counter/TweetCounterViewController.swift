@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import TweetCounterUIComponents
 
 class TweetCounterViewController: UIViewController {
 
     // MARK: Outlets
+    @IBOutlet private weak var twitterLogoImageView: UIImageView!
     @IBOutlet private weak var tweetCounterView: TweetCounterView!
     @IBOutlet private weak var darkModeIconImageView: UIImageView!
     @IBOutlet private weak var darkModeSwitch: UISwitch!
@@ -45,6 +47,16 @@ private extension TweetCounterViewController {
     }
     
     func setupViewUpon(userInterfaceStyle: UIUserInterfaceStyle) {
+        setupTwitterLogoColor(userInterfaceStyle: userInterfaceStyle)
+        setupDarkModeToggleColors(userInterfaceStyle: userInterfaceStyle)
+    }
+    
+    func setupTwitterLogoColor(userInterfaceStyle: UIUserInterfaceStyle) {
+        let color: UIColor = userInterfaceStyle == .dark ? .white : UIColor(hexString: "#03A9F4")
+        twitterLogoImageView.tintColor = color
+    }
+    
+    func setupDarkModeToggleColors(userInterfaceStyle: UIUserInterfaceStyle) {
         let isDarkMode = userInterfaceStyle == .dark
         darkModeIconImageView.tintColor = isDarkMode ? .white : UIColor(hexString: "#FDB813")
         darkModeSwitch.isOn = isDarkMode
