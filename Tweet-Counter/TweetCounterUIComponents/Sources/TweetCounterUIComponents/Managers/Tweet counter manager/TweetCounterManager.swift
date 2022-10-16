@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import TweetCounterUtilities
 
 class TweetCounterManager: TweetCounterManagerProtocol {
     

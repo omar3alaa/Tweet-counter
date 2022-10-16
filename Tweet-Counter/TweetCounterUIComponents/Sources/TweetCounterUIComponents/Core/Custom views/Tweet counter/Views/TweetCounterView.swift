@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 import RxCocoa
 import RxSwift
+import TweetCounterUtilities
 
-class TweetCounterView: UIView {
+public class TweetCounterView: UIView {
     
     // MARK: - Outlets
     @IBOutlet private var containerView: UIView!
-    @IBOutlet private weak var twitterLogoImageView: UIImageView!
     @IBOutlet private weak var typedCharactersLabel: UILabel!
     @IBOutlet private weak var remainingCharactersLabel: UILabel!
     @IBOutlet private weak var textView: UITextView!
@@ -39,16 +39,16 @@ class TweetCounterView: UIView {
         loadViewFromNib()
     }
     
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        setupColors()
+        setupLabelsColors()
     }
 }
 
 // MARK: Private helpers
 private extension TweetCounterView {
     func loadViewFromNib() {
-        let bundle = Bundle(for: type(of: self))
+        let bundle = Bundle.module
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
         view.frame = bounds
@@ -61,16 +61,11 @@ private extension TweetCounterView {
     
     func setupView() {
         setupTextView()
-        setupColors()
+        setupLabelsColors()
     }
     
     func setupTextView() {
         textView.contentInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
-    }
-    
-    func setupColors() {
-        setupLabelsColors()
-        setupTwitterLogoColor()
     }
     
     func setupLabelsColors() {
@@ -78,12 +73,6 @@ private extension TweetCounterView {
         let color: UIColor = userInterfaceStyle == .dark ? .white : .black
         remainingCharactersLabel.textColor = color
         typedCharactersLabel.textColor = color
-    }
-    
-    func setupTwitterLogoColor() {
-        let userInterfaceStyle = traitCollection.userInterfaceStyle
-        let color: UIColor = userInterfaceStyle == .dark ? .white : UIColor(hexString: "#03A9F4")
-        twitterLogoImageView.tintColor = color
     }
     
     func setupViewModel() {

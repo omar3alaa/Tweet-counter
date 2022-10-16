@@ -6,7 +6,8 @@
 //
 
 import Foundation
-extension String {
+
+public extension String {
     var isValidUrlUsingTwitterRegex: Bool {
         let urlRegEx = Regexp.TWUValidURLPatternString
         return NSPredicate(format: "SELF MATCHES %@", urlRegEx).evaluate(with: self) && self.count <= 4088

@@ -21,7 +21,6 @@
                 <outlet property="containerView" destination="iN0-l3-epB" id="zVE-f0-wj8"/>
                 <outlet property="remainingCharactersLabel" destination="mrT-eH-SZ7" id="ZMW-4P-c5V"/>
                 <outlet property="textView" destination="IpC-UN-ZA5" id="Qof-TX-WZB"/>
-                <outlet property="twitterLogoImageView" destination="q0k-Io-0bS" id="G6b-Vf-3RH"/>
                 <outlet property="typedCharactersLabel" destination="Kf8-eb-Ix2" id="p4k-oP-DSa"/>
             </connections>
         </placeholder>
@@ -30,15 +29,8 @@
             <rect key="frame" x="0.0" y="0.0" width="624" height="575"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterLogo" translatesAutoresizingMaskIntoConstraints="NO" id="q0k-Io-0bS">
-                    <rect key="frame" x="282" y="30" width="60" height="49"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="49" id="6wC-Kv-i7M"/>
-                        <constraint firstAttribute="width" constant="60" id="p72-yD-G2I"/>
-                    </constraints>
-                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyL-HQ-Qba">
-                    <rect key="frame" x="0.0" y="101" width="624" height="108"/>
+                    <rect key="frame" x="0.0" y="0.0" width="624" height="108"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGd-zt-WBb">
                             <rect key="frame" x="16" y="0.0" width="286" height="108"/>
@@ -57,7 +49,7 @@
                                     <rect key="frame" x="0.0" y="35" width="286" height="73"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf8-eb-Ix2">
-                                            <rect key="frame" x="10" y="36.666666666666657" width="266" height="0.0"/>
+                                            <rect key="frame" x="10" y="36.666666666666671" width="266" height="0.0"/>
                                             <fontDescription key="fontDescription" name="DINNextLTArabic-Medium" family="DIN Next LT Arabic" pointSize="26"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -111,7 +103,7 @@
                                     <rect key="frame" x="0.0" y="35" width="286" height="73"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrT-eH-SZ7">
-                                            <rect key="frame" x="10" y="36.666666666666657" width="266" height="0.0"/>
+                                            <rect key="frame" x="10" y="36.666666666666671" width="266" height="0.0"/>
                                             <fontDescription key="fontDescription" name="DINNextLTArabic-Medium" family="DIN Next LT Arabic" pointSize="26"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -162,7 +154,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUb-j6-sNx" userLabel="Shadow view">
-                    <rect key="frame" x="20" y="237" width="584" height="334"/>
+                    <rect key="frame" x="20" y="136" width="584" height="435"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
@@ -180,10 +172,10 @@
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RbV-ne-Lkr">
-                    <rect key="frame" x="16" y="233" width="592" height="342"/>
+                    <rect key="frame" x="16" y="132" width="592" height="443"/>
                     <subviews>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IpC-UN-ZA5">
-                            <rect key="frame" x="0.0" y="0.0" width="592" height="342"/>
+                            <rect key="frame" x="0.0" y="0.0" width="592" height="443"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <color key="textColor" systemColor="labelColor"/>
                             <fontDescription key="fontDescription" name="DINNextLTArabic-Regular" family="DIN Next LT Arabic" pointSize="14"/>
@@ -215,7 +207,6 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="q0k-Io-0bS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="03o-TC-aem"/>
                 <constraint firstItem="RbV-ne-Lkr" firstAttribute="top" secondItem="hyL-HQ-Qba" secondAttribute="bottom" constant="24" id="8tM-Nj-qVo"/>
                 <constraint firstItem="KUb-j6-sNx" firstAttribute="top" secondItem="RbV-ne-Lkr" secondAttribute="top" constant="4" id="Dp7-TM-Iwc"/>
                 <constraint firstAttribute="trailing" secondItem="hyL-HQ-Qba" secondAttribute="trailing" id="Hbw-5N-AOq"/>
@@ -223,8 +214,7 @@
                 <constraint firstItem="KUb-j6-sNx" firstAttribute="leading" secondItem="RbV-ne-Lkr" secondAttribute="leading" constant="4" id="LfF-S2-yEy"/>
                 <constraint firstItem="KUb-j6-sNx" firstAttribute="trailing" secondItem="RbV-ne-Lkr" secondAttribute="trailing" constant="-4" id="MKe-pe-Dof"/>
                 <constraint firstItem="hyL-HQ-Qba" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Nx7-VZ-ZEC"/>
-                <constraint firstItem="hyL-HQ-Qba" firstAttribute="top" secondItem="q0k-Io-0bS" secondAttribute="bottom" constant="22" id="dYg-LF-f78"/>
-                <constraint firstItem="q0k-Io-0bS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="l3z-aJ-H3Q"/>
+                <constraint firstItem="hyL-HQ-Qba" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nOX-K4-zZO"/>
                 <constraint firstItem="RbV-ne-Lkr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="r84-MQ-ivF"/>
                 <constraint firstAttribute="bottom" secondItem="RbV-ne-Lkr" secondAttribute="bottom" id="seS-8n-6pu"/>
                 <constraint firstAttribute="trailing" secondItem="RbV-ne-Lkr" secondAttribute="trailing" constant="16" id="w10-T0-Bew"/>
@@ -234,7 +224,6 @@
         </view>
     </objects>
     <resources>
-        <image name="twitterLogo" width="60" height="49.333332061767578"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

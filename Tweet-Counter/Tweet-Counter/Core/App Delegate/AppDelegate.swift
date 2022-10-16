@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import TweetCounterUIComponents
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        TweetCounterUIComponents.shared.registerFonts()
         let tweetCounterViewController = TweetCounterViewController()
         let window = UIWindow()
         setUpWindow(window, withRootViewController: tweetCounterViewController)

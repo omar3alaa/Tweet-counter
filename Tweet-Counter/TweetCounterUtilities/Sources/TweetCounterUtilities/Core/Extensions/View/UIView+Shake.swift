@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIView {
+public extension UIView {
     func shake(duration: CFTimeInterval) {
         let translation = CAKeyframeAnimation(keyPath: "transform.translation.x");
         translation.timingFunction = CAMediaTimingFunction(name: .linear)

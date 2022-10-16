@@ -44,7 +44,7 @@ class Configuration {
     }
     
     static func buildConfiguration() -> Configuration? {
-        guard let urlPath = Bundle.main.url(forResource: "config", withExtension: "json"),
+        guard let urlPath = Bundle.module.url(forResource: "config", withExtension: "json"),
               let jsonData = try? Data(contentsOf: urlPath) else {
             return nil
         }
