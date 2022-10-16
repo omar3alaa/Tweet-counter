@@ -110,9 +110,9 @@
 		14E3604A28F9F35E005EA69D = {
 			isa = PBXGroup;
 			children = (
-				142D525228FC01AF004BC011 /* Packages */,
 				14E3605528F9F35E005EA69D /* Tweet-Counter */,
 				14E3606C28F9F360005EA69D /* Tweet-CounterTests */,
+				142D525228FC01AF004BC011 /* Packages */,
 				14E3605428F9F35E005EA69D /* Products */,
 				1403416228FABB4600C1311D /* Frameworks */,
 			);
