@@ -13,7 +13,13 @@ public class TweetCounterUIComponents {
     
     public static let shared = TweetCounterUIComponents()
     
-    public func registerFonts() {
+    public func initialize() {
+        registerFonts()
+    }
+}
+
+private extension TweetCounterUIComponents {
+    func registerFonts() {
         _ = UIFont.registerFont(bundle: .module, fontName: "ArbFONTS-DINNextLTArabic-Black-2", fontExtension: "ttf")
         _ = UIFont.registerFont(bundle: .module, fontName: "ArbFONTS-DINNextLTArabic-Bold-2", fontExtension: "ttf")
         _ = UIFont.registerFont(bundle: .module, fontName: "ArbFONTS-DINNextLTArabic-Heavy-1", fontExtension: "ttf")
