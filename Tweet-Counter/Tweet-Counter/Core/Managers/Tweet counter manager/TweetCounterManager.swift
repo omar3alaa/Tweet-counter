@@ -16,7 +16,7 @@ class TweetCounterManager: TweetCounterManagerProtocol {
     }
     
     func getTweetCountFor(tweet: String) -> Int {
-        var tweet = tweet
+        var tweet = tweet.lowercased()
         var charactersCount = 0
         let whiteSpacesCount = getWhiteSpacesCountIn(tweet: tweet)
         let totalUrlsCharactersCount = removeUrlsFrom(tweet: &tweet)
@@ -33,7 +33,7 @@ private extension TweetCounterManager {
     }
     
     /**
-     A function to remove urls from a specific string in place, so this function ALTERS the string, take care while using it.
+     A function to remove urls from a specific string in place, so this function ALTERS the string.
      this function returns all urls' characters count that have been removed, this calculation implemented according to twitter mechanism
      
      - Parameter tweet: Address to the string it will search in
