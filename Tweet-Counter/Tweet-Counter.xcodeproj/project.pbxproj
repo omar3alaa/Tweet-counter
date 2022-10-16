@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		1403418D28FAD89E00C1311D /* TweetCounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1403418B28FAD89E00C1311D /* TweetCounterViewController.swift */; };
 		1403418E28FAD89E00C1311D /* TweetCounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1403418C28FAD89E00C1311D /* TweetCounterViewController.xib */; };
-		142D525628FC01D2004BC011 /* TweetCounterUIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 142D525528FC01D2004BC011 /* TweetCounterUIComponents */; };
 		1438206628FC31F30074D326 /* TweetCounterUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 1438206528FC31F30074D326 /* TweetCounterUtilities */; };
+		1438206A28FC32E80074D326 /* TweetCounterUIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 1438206928FC32E80074D326 /* TweetCounterUIComponents */; };
 		14E3605728F9F35E005EA69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3605628F9F35E005EA69D /* AppDelegate.swift */; };
 		14E3606028F9F360005EA69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14E3605F28F9F360005EA69D /* Assets.xcassets */; };
 		14E3606328F9F360005EA69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E3606128F9F360005EA69D /* LaunchScreen.storyboard */; };
@@ -43,7 +43,6 @@
 /* Begin PBXFileReference section */
 		1403418B28FAD89E00C1311D /* TweetCounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterViewController.swift; sourceTree = "<group>"; };
 		1403418C28FAD89E00C1311D /* TweetCounterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetCounterViewController.xib; sourceTree = "<group>"; };
-		141EE4AC28FBF2E50045D05A /* TweetCounterUIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TweetCounterUIComponents; sourceTree = "<group>"; };
 		142D525328FC01AF004BC011 /* TweetCounterUIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TweetCounterUIComponents; sourceTree = "<group>"; };
 		142D525428FC01BB004BC011 /* TweetCounterUtilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TweetCounterUtilities; sourceTree = "<group>"; };
 		14E3605328F9F35E005EA69D /* Tweet-Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tweet-Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,7 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1438206628FC31F30074D326 /* TweetCounterUtilities in Frameworks */,
-				142D525628FC01D2004BC011 /* TweetCounterUIComponents in Frameworks */,
+				1438206A28FC32E80074D326 /* TweetCounterUIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				142D525228FC01AF004BC011 /* Packages */,
-				141EE4AC28FBF2E50045D05A /* TweetCounterUIComponents */,
 				14E3605528F9F35E005EA69D /* Tweet-Counter */,
 				14E3606C28F9F360005EA69D /* Tweet-CounterTests */,
 				14E3605428F9F35E005EA69D /* Products */,
@@ -215,8 +213,8 @@
 			);
 			name = "Tweet-Counter";
 			packageProductDependencies = (
-				142D525528FC01D2004BC011 /* TweetCounterUIComponents */,
 				1438206528FC31F30074D326 /* TweetCounterUtilities */,
+				1438206928FC32E80074D326 /* TweetCounterUIComponents */,
 			);
 			productName = "Tweet-Counter";
 			productReference = 14E3605328F9F35E005EA69D /* Tweet-Counter.app */;
@@ -589,13 +587,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		142D525528FC01D2004BC011 /* TweetCounterUIComponents */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = TweetCounterUIComponents;
-		};
 		1438206528FC31F30074D326 /* TweetCounterUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TweetCounterUtilities;
+		};
+		1438206928FC32E80074D326 /* TweetCounterUIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TweetCounterUIComponents;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
