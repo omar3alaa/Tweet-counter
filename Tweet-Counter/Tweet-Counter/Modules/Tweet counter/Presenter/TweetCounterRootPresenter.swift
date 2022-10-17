@@ -24,8 +24,7 @@ class TweetCounterRootPresenter: TweetCounterRootPresenterProtocol {
     }
     
     func viewDidLoad() {
-        disableUserInteractionEnablement()
-        view?.setScreenTitleWith(text: "Twitter character count")
+        setupViewInitialState()
     }
     
     func didChangeText(newText: String?) {
@@ -34,17 +33,18 @@ class TweetCounterRootPresenter: TweetCounterRootPresenterProtocol {
             view?.toggleCopyTextButtonEnablement(isEnabled: true)
             view?.toggleClearTextButtonEnablement(isEnabled: true)
         } else {
-            disableUserInteractionEnablement()
+            view?.toggleCopyTextButtonEnablement(isEnabled: false)
+            view?.toggleClearTextButtonEnablement(isEnabled: false)
         }
     }
     
     func didTapCopyTextButton() {
-        let dataModel = ToastDataModel(iconImageName: .success,
-                                       actionButtonTitle: nil,
-                                       message: "Text is copied successfully to clipboard!",
-                                       actionButtonClosure: nil)
+        let toastDataModel = ToastDataModel(iconImageName: .success,
+                                            actionButtonTitle: nil,
+                                            message: "Text is copied successfully to clipboard!",
+                                            actionButtonClosure: nil)
         view?.copyTextToClipboard(textToCopy: text)
-        view?.showSuccessToastWith(dataModel: dataModel)
+        view?.showSuccessToastWith(dataModel: toastDataModel)
     }
     
     func didTapClearTextButton() {
@@ -52,67 +52,97 @@ class TweetCounterRootPresenter: TweetCounterRootPresenterProtocol {
     }
     
     func didTapPostTweetButton() {
+        setupViewUponLoadingState()
         authorizeTwitterInteractor.authorizeTwitter()
     }
     
-    func typedCharactersCountChanged(didReachMaximumCharactersCountAllowed: Bool) {
-        view?.togglePostTweetButtonEnablement(isEnabled: !didReachMaximumCharactersCountAllowed)
+    func warningStateChanged(isWarningStateOn: Bool) {
+        guard let text = text else {
+            view?.togglePostTweetButtonEnablement(isEnabled: false)
+            return
+        }
+        if isWarningStateOn || text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            view?.togglePostTweetButtonEnablement(isEnabled: false)
+        } else {
+            view?.togglePostTweetButtonEnablement(isEnabled: true)
+        }
     }
 }
 
 extension TweetCounterRootPresenter: AuthorizeTwitterInteractorOutputProtocol {
     func didAuthorizeTwitterSuccessfully() {
         guard let text = text else {
-            let dataModel = ToastDataModel(iconImageName: .error,
-                                           actionButtonTitle: nil,
-                                           message: "Text shouldn't be empty!",
-                                           actionButtonClosure: nil)
-            view?.showErrorToastWith(dataModel: dataModel)
+            setupViewUponTweetingEmptyOrNilText()
             return
         }
         if text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            let dataModel = ToastDataModel(iconImageName: .error,
-                                           actionButtonTitle: nil,
-                                           message: "Text shouldn't be empty!",
-                                           actionButtonClosure: nil)
-            view?.showErrorToastWith(dataModel: dataModel)
+            setupViewUponTweetingEmptyOrNilText()
             return
         }
         postTweetInteractor.postTweetWith(text: text)
     }
     
     func didFailToAuthorizeTwitterWith(error: NetworkError) {
-        let dataModel = ToastDataModel(iconImageName: .error,
-                                       actionButtonTitle: nil,
-                                       message: "Something went wrong!",
-                                       actionButtonClosure: nil)
-        view?.showErrorToastWith(dataModel: dataModel)
+        setupViewUponErrorState()
     }
 }
 
 extension TweetCounterRootPresenter: PostTweetInteractorOutputProtocol {
     func didPostTweetSuccessfully() {
-        let dataModel = ToastDataModel(iconImageName: .error,
-                                       actionButtonTitle: nil,
-                                       message: "Your tweet is posted successfully!",
-                                       actionButtonClosure: nil)
-        view?.showSuccessToastWith(dataModel: dataModel)
+        let toastDataModel = ToastDataModel(iconImageName: .success,
+                                            actionButtonTitle: nil,
+                                            message: "Your tweet is posted successfully!",
+                                            actionButtonClosure: nil)
         view?.clearText()
+        view?.showSuccessToastWith(dataModel: toastDataModel)
+        view?.toggleLoaderVisibility(showLoader: false)
+        view?.toggleTextViewEnablement(isEnabled: true)
     }
     
     func didFailToPostTweetWith(error: TweetCounterUtilities.NetworkError) {
-        let dataModel = ToastDataModel(iconImageName: .error,
-                                       actionButtonTitle: nil,
-                                       message: "Something went wrong!",
-                                       actionButtonClosure: nil)
-        view?.showErrorToastWith(dataModel: dataModel)
+        setupViewUponErrorState()
     }
 }
 
 private extension TweetCounterRootPresenter {
-    func disableUserInteractionEnablement() {
+    func setupViewInitialState() {
         view?.toggleCopyTextButtonEnablement(isEnabled: false)
         view?.toggleClearTextButtonEnablement(isEnabled: false)
         view?.togglePostTweetButtonEnablement(isEnabled: false)
+        view?.setScreenTitleWith(text: "Twitter character count")
+    }
+    
+    func setupViewUponTweetingEmptyOrNilText() {
+        let toastDataModel = ToastDataModel(iconImageName: .error,
+                                            actionButtonTitle: nil,
+                                            message: "Text shouldn't be empty!",
+                                            actionButtonClosure: nil)
+        view?.showErrorToastWith(dataModel: toastDataModel)
+        view?.toggleLoaderVisibility(showLoader: false)
+        view?.toggleCopyTextButtonEnablement(isEnabled: false)
+        view?.toggleClearTextButtonEnablement(isEnabled: false)
+        view?.togglePostTweetButtonEnablement(isEnabled: false)
+        view?.toggleTextViewEnablement(isEnabled: true)
+    }
+    
+    func setupViewUponLoadingState() {
+        view?.toggleLoaderVisibility(showLoader: true)
+        view?.toggleCopyTextButtonEnablement(isEnabled: false)
+        view?.toggleClearTextButtonEnablement(isEnabled: false)
+        view?.togglePostTweetButtonEnablement(isEnabled: false)
+        view?.toggleTextViewEnablement(isEnabled: false)
+    }
+    
+    func setupViewUponErrorState() {
+        let toastDataModel = ToastDataModel(iconImageName: .error,
+                                            actionButtonTitle: nil,
+                                            message: "Something went wrong!",
+                                            actionButtonClosure: nil)
+        view?.showErrorToastWith(dataModel: toastDataModel)
+        view?.toggleLoaderVisibility(showLoader: false)
+        view?.toggleCopyTextButtonEnablement(isEnabled: true)
+        view?.toggleClearTextButtonEnablement(isEnabled: true)
+        view?.togglePostTweetButtonEnablement(isEnabled: true)
+        view?.toggleTextViewEnablement(isEnabled: true)
     }
 }

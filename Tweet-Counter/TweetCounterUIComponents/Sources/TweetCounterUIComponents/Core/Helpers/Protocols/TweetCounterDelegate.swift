@@ -9,5 +9,5 @@ import Foundation
 
 public protocol TweetCounterDelegate: AnyObject {
     func didChangeText(newText: String?)
-    func typedCharactersCountChanged(didReachMaximumCharactersCountAllowed: Bool)
+    func warningStateChanged(isWarningStateOn: Bool)
 }

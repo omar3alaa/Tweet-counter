@@ -21,6 +21,7 @@
 		1438208728FCC0A10074D326 /* PostTweetInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438208628FCC0A10074D326 /* PostTweetInteractor.swift */; };
 		1438208C28FCC12B0074D326 /* TweetPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438208B28FCC12B0074D326 /* TweetPostService.swift */; };
 		1438208F28FCC17F0074D326 /* Oauth1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438208E28FCC17F0074D326 /* Oauth1.swift */; };
+		14476F1C28FD2282003EC34B /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 14476F1B28FD2282003EC34B /* NVActivityIndicatorView */; };
 		14E3605728F9F35E005EA69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3605628F9F35E005EA69D /* AppDelegate.swift */; };
 		14E3606028F9F360005EA69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14E3605F28F9F360005EA69D /* Assets.xcassets */; };
 		14E3606328F9F360005EA69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E3606128F9F360005EA69D /* LaunchScreen.storyboard */; };
@@ -78,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14476F1C28FD2282003EC34B /* NVActivityIndicatorView in Frameworks */,
 				1438206628FC31F30074D326 /* TweetCounterUtilities in Frameworks */,
 				1438206A28FC32E80074D326 /* TweetCounterUIComponents in Frameworks */,
 				1438207628FC66D30074D326 /* OAuthSwift in Frameworks */,
@@ -341,6 +343,7 @@
 				1438206528FC31F30074D326 /* TweetCounterUtilities */,
 				1438206928FC32E80074D326 /* TweetCounterUIComponents */,
 				1438207528FC66D30074D326 /* OAuthSwift */,
+				14476F1B28FD2282003EC34B /* NVActivityIndicatorView */,
 			);
 			productName = "Tweet-Counter";
 			productReference = 14E3605328F9F35E005EA69D /* Tweet-Counter.app */;
@@ -395,6 +398,7 @@
 			mainGroup = 14E3604A28F9F35E005EA69D;
 			packageReferences = (
 				1438207428FC66D30074D326 /* XCRemoteSwiftPackageReference "OAuthSwift" */,
+				14476F1A28FD2282003EC34B /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = 14E3605428F9F35E005EA69D /* Products */;
 			projectDirPath = "";
@@ -731,6 +735,14 @@
 				minimumVersion = 2.2.0;
 			};
 		};
+		14476F1A28FD2282003EC34B /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -746,6 +758,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1438207428FC66D30074D326 /* XCRemoteSwiftPackageReference "OAuthSwift" */;
 			productName = OAuthSwift;
+		};
+		14476F1B28FD2282003EC34B /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14476F1A28FD2282003EC34B /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

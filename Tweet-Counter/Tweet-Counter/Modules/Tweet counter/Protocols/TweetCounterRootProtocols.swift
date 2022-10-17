@@ -14,10 +14,12 @@ protocol TweetCounterRootViewProtocol: AnyObject {
     func toggleCopyTextButtonEnablement(isEnabled: Bool)
     func toggleClearTextButtonEnablement(isEnabled: Bool)
     func togglePostTweetButtonEnablement(isEnabled: Bool)
+    func toggleTextViewEnablement(isEnabled: Bool)
     func clearText()
     func copyTextToClipboard(textToCopy: String?)
     func showErrorToastWith(dataModel: ToastDataModel)
     func showSuccessToastWith(dataModel: ToastDataModel)
+    func toggleLoaderVisibility(showLoader: Bool)
 }
 
 protocol TweetCounterRootPresenterProtocol {
@@ -26,7 +28,7 @@ protocol TweetCounterRootPresenterProtocol {
     func didTapCopyTextButton()
     func didTapClearTextButton()
     func didTapPostTweetButton()
-    func typedCharactersCountChanged(didReachMaximumCharactersCountAllowed: Bool)
+    func warningStateChanged(isWarningStateOn: Bool)
 }
 
 protocol AuthorizeTwitterInteractorProtocol {

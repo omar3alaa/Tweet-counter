@@ -20,6 +20,7 @@
                 <outlet property="copyTextButton" destination="pdx-w5-37D" id="5ft-BU-zP1"/>
                 <outlet property="darkModeIconImageView" destination="nXJ-ma-PcA" id="oxu-ur-jT9"/>
                 <outlet property="darkModeSwitch" destination="qtO-yA-mU0" id="kea-7r-0XA"/>
+                <outlet property="loader" destination="ky0-9B-AqV" id="0xd-UE-Cpd"/>
                 <outlet property="postTweetButton" destination="Mxt-nL-B0Z" id="h19-dW-X5X"/>
                 <outlet property="tweetCounterView" destination="EVk-dn-TGI" id="3hO-Bq-Hol"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -143,6 +144,14 @@
                         <constraint firstAttribute="height" constant="60" id="tp2-IC-xld"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ky0-9B-AqV" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="166.66666666666666" y="396" width="60" height="60"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Tb6-50-GPT"/>
+                        <constraint firstAttribute="height" constant="60" id="WSQ-dn-GNl"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -160,7 +169,9 @@
                 <constraint firstItem="ChQ-a5-lXd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VNb-54-ctn"/>
                 <constraint firstItem="Mxt-nL-B0Z" firstAttribute="top" secondItem="pdx-w5-37D" secondAttribute="bottom" constant="24" id="acE-JC-2xO"/>
                 <constraint firstItem="8gv-ql-fm0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mCg-Wi-Nb5"/>
+                <constraint firstItem="ky0-9B-AqV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="n3F-hG-vaQ"/>
                 <constraint firstItem="W9f-ee-cSQ" firstAttribute="top" secondItem="pdx-w5-37D" secondAttribute="top" id="sqa-Ke-tPj"/>
+                <constraint firstItem="ky0-9B-AqV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vGy-qZ-WxN"/>
                 <constraint firstItem="ChQ-a5-lXd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Mxt-nL-B0Z" secondAttribute="bottom" constant="10" id="vaG-6t-WDo"/>
                 <constraint firstItem="EVk-dn-TGI" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="z7r-bg-MzS"/>
                 <constraint firstItem="pdx-w5-37D" firstAttribute="top" secondItem="EVk-dn-TGI" secondAttribute="bottom" constant="24" id="zAm-cq-40I"/>

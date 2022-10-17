@@ -52,6 +52,10 @@ public class TweetCounterView: UIView {
     public func clearText() {
         textView.rx.text.onNext("")
     }
+    
+    public func toggleTextViewEnablement(isEnabled: Bool) {
+        viewModel?.input.isTextViewEnabled.onNext(isEnabled)
+    }
 }
 
 // MARK: Private helpers
@@ -93,6 +97,7 @@ private extension TweetCounterView {
         viewModel?.output.remainingCharacters.drive(remainingCharactersLabel.rx.text).disposed(by: disposeBag)
         viewModel?.output.typedCharacters.drive(typedCharactersLabel.rx.text).disposed(by: disposeBag)
         viewModel?.output.tweetText.drive(textView.rx.text).disposed(by: disposeBag)
+        viewModel?.output.isTextViewEnabled.drive(textView.rx.isUserInteractionEnabled).disposed(by: disposeBag)
         viewModel?.output.warningStateOn.drive(onNext: { [weak self] warningStateOn in
             guard let strongSelf = self else { return }
             if warningStateOn {
@@ -102,7 +107,7 @@ private extension TweetCounterView {
             } else {
                 strongSelf.setupLabelsColors()
             }
-            strongSelf.delegate?.typedCharactersCountChanged(didReachMaximumCharactersCountAllowed: warningStateOn)
+            strongSelf.delegate?.warningStateChanged(isWarningStateOn: warningStateOn)
         }).disposed(by: disposeBag)
         viewModel?.output.playErrorFeedback.throttle(.seconds(1), latest: false).drive(onNext: { _ in
             let generator = UINotificationFeedbackGenerator()

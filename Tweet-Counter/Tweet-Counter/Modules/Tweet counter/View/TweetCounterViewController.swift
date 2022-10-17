@@ -8,6 +8,7 @@
 import UIKit
 import TweetCounterUIComponents
 import OAuthSwift
+import NVActivityIndicatorView
 
 class TweetCounterViewController: UIViewController {
 
@@ -18,7 +19,8 @@ class TweetCounterViewController: UIViewController {
     @IBOutlet private weak var copyTextButton: UIButton!
     @IBOutlet private weak var clearTextButton: UIButton!
     @IBOutlet private weak var postTweetButton: UIButton!
-    
+    @IBOutlet private weak var loader: NVActivityIndicatorView!
+
     // MARK: - Properties
     var presenter: TweetCounterRootPresenterProtocol?
     
@@ -51,10 +53,10 @@ class TweetCounterViewController: UIViewController {
     @IBAction func didToggleDarkMode(_ sender: Any) {
         guard let window = UIApplication.shared.windows.first else { return }
         let isDarkModeNow = traitCollection.userInterfaceStyle == .dark
-        let newInterfaceStyle: UIUserInterfaceStyle = isDarkModeNow ? .light : .dark
-        setupDarkModeToggleColors(userInterfaceStyle: newInterfaceStyle)
+        let newUserInterfaceStyle: UIUserInterfaceStyle = isDarkModeNow ? .light : .dark
+        setupColors(userInterfaceStyle: newUserInterfaceStyle)
         UIView.transition (with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
-            window.overrideUserInterfaceStyle = newInterfaceStyle
+            window.overrideUserInterfaceStyle = newUserInterfaceStyle
         }, completion: nil)
     }
 }
@@ -63,8 +65,18 @@ class TweetCounterViewController: UIViewController {
 private extension TweetCounterViewController {
     func setupView() {
         let userInterfaceStyle = traitCollection.userInterfaceStyle
-        setupDarkModeToggleColors(userInterfaceStyle: userInterfaceStyle)
+        setupColors(userInterfaceStyle: userInterfaceStyle)
         tweetCounterView.setDelegate(delegate: self)
+    }
+    
+    func setupColors(userInterfaceStyle: UIUserInterfaceStyle) {
+        setupLoaderColors(userInterfaceStyle: userInterfaceStyle)
+        setupDarkModeToggleColors(userInterfaceStyle: userInterfaceStyle)
+    }
+    
+    func setupLoaderColors(userInterfaceStyle: UIUserInterfaceStyle) {
+        let isDarkMode = userInterfaceStyle == .dark
+        loader.color = isDarkMode ? .white : .black
     }
     
     func setupDarkModeToggleColors(userInterfaceStyle: UIUserInterfaceStyle) {
@@ -89,8 +101,8 @@ extension TweetCounterViewController: TweetCounterDelegate {
         presenter?.didChangeText(newText: newText)
     }
     
-    func typedCharactersCountChanged(didReachMaximumCharactersCountAllowed: Bool) {
-        presenter?.typedCharactersCountChanged(didReachMaximumCharactersCountAllowed: didReachMaximumCharactersCountAllowed)
+    func warningStateChanged(isWarningStateOn: Bool) {
+        presenter?.warningStateChanged(isWarningStateOn: isWarningStateOn)
     }
 }
 
@@ -110,6 +122,10 @@ extension TweetCounterViewController: TweetCounterRootViewProtocol {
     
     func togglePostTweetButtonEnablement(isEnabled: Bool) {
         toggleButtonEnablement(button: postTweetButton, isEnabled: isEnabled)
+    }
+    
+    func toggleTextViewEnablement(isEnabled: Bool) {
+        tweetCounterView.toggleTextViewEnablement(isEnabled: isEnabled)
     }
     
     func clearText() {
@@ -138,5 +154,13 @@ extension TweetCounterViewController: TweetCounterRootViewProtocol {
                                    verticalConstraintConstant: nil)
         toast.configure(uiModel: uiModel)
         toast.configure(dataModel: dataModel)
+    }
+    
+    func toggleLoaderVisibility(showLoader: Bool) {
+        if showLoader {
+            loader.startAnimating()
+        } else {
+            loader.stopAnimating()
+        }
     }
 }
