@@ -21,6 +21,7 @@ class TweetCounterRootBuilder {
         viewController.presenter = presenter
         authorizeTwitterInteractor.output = presenter
         postTweetInteractor.output = presenter
-        return viewController
+        let navigationController = UINavigationController(rootViewController: viewController)
+        return navigationController
     }
 }

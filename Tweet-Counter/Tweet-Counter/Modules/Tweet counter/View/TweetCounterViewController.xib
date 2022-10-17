@@ -173,36 +173,36 @@
                                 <constraint firstItem="Mxt-nL-B0Z" firstAttribute="leading" secondItem="pdx-w5-37D" secondAttribute="leading" id="tbo-ll-F9Y"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ky0-9B-AqV" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                            <rect key="frame" x="166.66666666666666" y="190.66666666666666" width="60" height="60"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="60" id="Tb6-50-GPT"/>
-                                <constraint firstAttribute="height" constant="60" id="WSQ-dn-GNl"/>
-                            </constraints>
-                        </view>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="ky0-9B-AqV" firstAttribute="centerX" secondItem="2TP-SA-YFn" secondAttribute="centerX" id="Aqt-xS-X6p"/>
                         <constraint firstAttribute="trailing" secondItem="XN7-8S-xrg" secondAttribute="trailing" id="D9E-0T-7qB"/>
                         <constraint firstItem="XN7-8S-xrg" firstAttribute="leading" secondItem="2TP-SA-YFn" secondAttribute="leading" id="MHE-Yw-lqW"/>
                         <constraint firstItem="XN7-8S-xrg" firstAttribute="width" secondItem="2TP-SA-YFn" secondAttribute="width" id="UNp-Ln-PrR"/>
                         <constraint firstItem="XN7-8S-xrg" firstAttribute="top" secondItem="2TP-SA-YFn" secondAttribute="top" id="dvG-JH-6da"/>
-                        <constraint firstItem="ky0-9B-AqV" firstAttribute="centerY" secondItem="2TP-SA-YFn" secondAttribute="centerY" id="hvR-dS-yYT"/>
                         <constraint firstAttribute="bottom" secondItem="XN7-8S-xrg" secondAttribute="bottom" id="wjO-Wd-1qj"/>
                     </constraints>
                     <viewLayoutGuide key="contentLayoutGuide" id="wUO-nn-8FE"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="LAG-hq-4Rn"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ky0-9B-AqV" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="166.66666666666666" y="220" width="60" height="60"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Tb6-50-GPT"/>
+                        <constraint firstAttribute="height" constant="60" id="WSQ-dn-GNl"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="ky0-9B-AqV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="CtN-rt-tFV"/>
                 <constraint firstItem="EVk-dn-TGI" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="Uu8-1U-XyZ"/>
                 <constraint firstItem="2TP-SA-YFn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XAh-Fc-LO7"/>
                 <constraint firstAttribute="bottom" secondItem="2TP-SA-YFn" secondAttribute="bottom" id="crR-do-XmD"/>
                 <constraint firstAttribute="trailing" secondItem="2TP-SA-YFn" secondAttribute="trailing" id="dM3-7a-H8B"/>
                 <constraint firstItem="2TP-SA-YFn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ifM-HK-w6N"/>
+                <constraint firstItem="ky0-9B-AqV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="s05-GA-CPA"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="67.938931297709928" y="20.422535211267608"/>
