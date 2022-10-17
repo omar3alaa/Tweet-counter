@@ -91,16 +91,12 @@ private extension TweetCounterViewController {
 
 // MARK: - TweetCounterDelegate
 extension TweetCounterViewController: TweetCounterDelegate {
-    func didChangeText(newText: String?) {
-        presenter?.didChangeText(newText: newText)
-    }
-    
-    func warningStateChanged(isWarningStateOn: Bool) {
-        presenter?.warningStateChanged(isWarningStateOn: isWarningStateOn)
+    func didChangeText(newText: String?, isWarningStateOn: Bool) {
+        presenter?.didChangeText(newText: newText, isWarningStateOn: isWarningStateOn)
     }
 }
 
-// MARK: -
+// MARK: - TweetCounterRootViewProtocol
 extension TweetCounterViewController: TweetCounterRootViewProtocol {
     func setScreenTitleWith(text: String) {
         title = text

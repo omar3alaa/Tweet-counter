@@ -28,7 +28,8 @@ let package = Package(
                            .product(name: "RxCocoa", package: "RxSwift")],
             resources: [
                 .process("Resources"),
-                .process("Core/Custom views/Tweet counter/Views/TweetCounterView.xib")
+                .process("Core/Custom views/Tweet counter/Views/TweetCounterView.xib"),
+                .process("Core/Helpers/Views/Toast/Toast.xib")
             ]),
         .testTarget(
             name: "TweetCounterUIComponentsTests",
