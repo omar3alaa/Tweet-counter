@@ -11,6 +11,17 @@
 		1403418E28FAD89E00C1311D /* TweetCounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1403418C28FAD89E00C1311D /* TweetCounterViewController.xib */; };
 		1438206628FC31F30074D326 /* TweetCounterUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 1438206528FC31F30074D326 /* TweetCounterUtilities */; };
 		1438206A28FC32E80074D326 /* TweetCounterUIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 1438206928FC32E80074D326 /* TweetCounterUIComponents */; };
+		1438206F28FC43800074D326 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438206E28FC43800074D326 /* Constants.swift */; };
+		1438207628FC66D30074D326 /* OAuthSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1438207528FC66D30074D326 /* OAuthSwift */; };
+		1438207D28FCB7A50074D326 /* TweetCounterRootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438207C28FCB7A50074D326 /* TweetCounterRootPresenter.swift */; };
+		1438207F28FCB7C40074D326 /* TweetCounterRootBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438207E28FCB7C40074D326 /* TweetCounterRootBuilder.swift */; };
+		1438208128FCB7D10074D326 /* TweetCounterRootProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438208028FCB7D10074D326 /* TweetCounterRootProtocols.swift */; };
+		1438208328FCBAD50074D326 /* AuthorizeTwitterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438208228FCBAD50074D326 /* AuthorizeTwitterInteractor.swift */; };
+		1438208528FCBC170074D326 /* TwitterAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438208428FCBC170074D326 /* TwitterAuthorizationService.swift */; };
+		1438208728FCC0A10074D326 /* PostTweetInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438208628FCC0A10074D326 /* PostTweetInteractor.swift */; };
+		1438208C28FCC12B0074D326 /* TweetPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438208B28FCC12B0074D326 /* TweetPostService.swift */; };
+		1438208F28FCC17F0074D326 /* Oauth1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1438208E28FCC17F0074D326 /* Oauth1.swift */; };
+		14476F1C28FD2282003EC34B /* NVActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 14476F1B28FD2282003EC34B /* NVActivityIndicatorView */; };
 		14E3605728F9F35E005EA69D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E3605628F9F35E005EA69D /* AppDelegate.swift */; };
 		14E3606028F9F360005EA69D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14E3605F28F9F360005EA69D /* Assets.xcassets */; };
 		14E3606328F9F360005EA69D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14E3606128F9F360005EA69D /* LaunchScreen.storyboard */; };
@@ -45,6 +56,15 @@
 		1403418C28FAD89E00C1311D /* TweetCounterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetCounterViewController.xib; sourceTree = "<group>"; };
 		142D525328FC01AF004BC011 /* TweetCounterUIComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TweetCounterUIComponents; sourceTree = "<group>"; };
 		142D525428FC01BB004BC011 /* TweetCounterUtilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TweetCounterUtilities; sourceTree = "<group>"; };
+		1438206E28FC43800074D326 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1438207C28FCB7A50074D326 /* TweetCounterRootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterRootPresenter.swift; sourceTree = "<group>"; };
+		1438207E28FCB7C40074D326 /* TweetCounterRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterRootBuilder.swift; sourceTree = "<group>"; };
+		1438208028FCB7D10074D326 /* TweetCounterRootProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCounterRootProtocols.swift; sourceTree = "<group>"; };
+		1438208228FCBAD50074D326 /* AuthorizeTwitterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeTwitterInteractor.swift; sourceTree = "<group>"; };
+		1438208428FCBC170074D326 /* TwitterAuthorizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAuthorizationService.swift; sourceTree = "<group>"; };
+		1438208628FCC0A10074D326 /* PostTweetInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTweetInteractor.swift; sourceTree = "<group>"; };
+		1438208B28FCC12B0074D326 /* TweetPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetPostService.swift; sourceTree = "<group>"; };
+		1438208E28FCC17F0074D326 /* Oauth1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oauth1.swift; sourceTree = "<group>"; };
 		14E3605328F9F35E005EA69D /* Tweet-Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tweet-Counter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14E3605628F9F35E005EA69D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14E3605F28F9F360005EA69D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,8 +79,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14476F1C28FD2282003EC34B /* NVActivityIndicatorView in Frameworks */,
 				1438206628FC31F30074D326 /* TweetCounterUtilities in Frameworks */,
 				1438206A28FC32E80074D326 /* TweetCounterUIComponents in Frameworks */,
+				1438207628FC66D30074D326 /* OAuthSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,8 +106,11 @@
 		1403418A28FAD88100C1311D /* Tweet counter */ = {
 			isa = PBXGroup;
 			children = (
-				1403418B28FAD89E00C1311D /* TweetCounterViewController.swift */,
-				1403418C28FAD89E00C1311D /* TweetCounterViewController.xib */,
+				1438207728FCB7700074D326 /* View */,
+				1438207828FCB7780074D326 /* Presenter */,
+				1438207928FCB77C0074D326 /* Interactors */,
+				1438207A28FCB7810074D326 /* Builder */,
+				1438207B28FCB7880074D326 /* Protocols */,
 			);
 			path = "Tweet counter";
 			sourceTree = "<group>";
@@ -105,6 +130,105 @@
 				142D525428FC01BB004BC011 /* TweetCounterUtilities */,
 			);
 			name = Packages;
+			sourceTree = "<group>";
+		};
+		1438206B28FC43540074D326 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1438208828FCC10C0074D326 /* Tweet post */,
+				1438206C28FC435D0074D326 /* Twitter authorization  */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1438206C28FC435D0074D326 /* Twitter authorization  */ = {
+			isa = PBXGroup;
+			children = (
+				1438208928FCC1180074D326 /* Service */,
+			);
+			path = "Twitter authorization ";
+			sourceTree = "<group>";
+		};
+		1438206D28FC436C0074D326 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1438206E28FC43800074D326 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		1438207728FCB7700074D326 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1403418B28FAD89E00C1311D /* TweetCounterViewController.swift */,
+				1403418C28FAD89E00C1311D /* TweetCounterViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1438207828FCB7780074D326 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1438207C28FCB7A50074D326 /* TweetCounterRootPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1438207928FCB77C0074D326 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				1438208228FCBAD50074D326 /* AuthorizeTwitterInteractor.swift */,
+				1438208628FCC0A10074D326 /* PostTweetInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		1438207A28FCB7810074D326 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				1438207E28FCB7C40074D326 /* TweetCounterRootBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		1438207B28FCB7880074D326 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1438208028FCB7D10074D326 /* TweetCounterRootProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		1438208828FCC10C0074D326 /* Tweet post */ = {
+			isa = PBXGroup;
+			children = (
+				1438208A28FCC11D0074D326 /* Service */,
+			);
+			path = "Tweet post";
+			sourceTree = "<group>";
+		};
+		1438208928FCC1180074D326 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1438208428FCBC170074D326 /* TwitterAuthorizationService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1438208A28FCC11D0074D326 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				1438208B28FCC12B0074D326 /* TweetPostService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		1438208D28FCC16F0074D326 /* Shared instances */ = {
+			isa = PBXGroup;
+			children = (
+				1438208E28FCC17F0074D326 /* Oauth1.swift */,
+			);
+			path = "Shared instances";
 			sourceTree = "<group>";
 		};
 		14E3604A28F9F35E005EA69D = {
@@ -130,6 +254,7 @@
 		14E3605528F9F35E005EA69D /* Tweet-Counter */ = {
 			isa = PBXGroup;
 			children = (
+				1438206B28FC43540074D326 /* Network */,
 				14F5F9B528FA98FB00E99AD4 /* Modules */,
 				14F5F9B128FA98B800E99AD4 /* Resources */,
 				14F5F9B028FA98AE00E99AD4 /* Core */,
@@ -148,6 +273,8 @@
 		14F5F9B028FA98AE00E99AD4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				1438208D28FCC16F0074D326 /* Shared instances */,
+				1438206D28FC436C0074D326 /* Constants */,
 				140341A428FB429900C1311D /* App Delegate */,
 			);
 			path = Core;
@@ -215,6 +342,8 @@
 			packageProductDependencies = (
 				1438206528FC31F30074D326 /* TweetCounterUtilities */,
 				1438206928FC32E80074D326 /* TweetCounterUIComponents */,
+				1438207528FC66D30074D326 /* OAuthSwift */,
+				14476F1B28FD2282003EC34B /* NVActivityIndicatorView */,
 			);
 			productName = "Tweet-Counter";
 			productReference = 14E3605328F9F35E005EA69D /* Tweet-Counter.app */;
@@ -268,6 +397,8 @@
 			);
 			mainGroup = 14E3604A28F9F35E005EA69D;
 			packageReferences = (
+				1438207428FC66D30074D326 /* XCRemoteSwiftPackageReference "OAuthSwift" */,
+				14476F1A28FD2282003EC34B /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 			);
 			productRefGroup = 14E3605428F9F35E005EA69D /* Products */;
 			projectDirPath = "";
@@ -304,8 +435,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1438207F28FCB7C40074D326 /* TweetCounterRootBuilder.swift in Sources */,
 				1403418D28FAD89E00C1311D /* TweetCounterViewController.swift in Sources */,
 				14E3605728F9F35E005EA69D /* AppDelegate.swift in Sources */,
+				1438208528FCBC170074D326 /* TwitterAuthorizationService.swift in Sources */,
+				1438208F28FCC17F0074D326 /* Oauth1.swift in Sources */,
+				1438206F28FC43800074D326 /* Constants.swift in Sources */,
+				1438208C28FCC12B0074D326 /* TweetPostService.swift in Sources */,
+				1438208728FCC0A10074D326 /* PostTweetInteractor.swift in Sources */,
+				1438208328FCBAD50074D326 /* AuthorizeTwitterInteractor.swift in Sources */,
+				1438208128FCB7D10074D326 /* TweetCounterRootProtocols.swift in Sources */,
+				1438207D28FCB7A50074D326 /* TweetCounterRootPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +726,25 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		1438207428FC66D30074D326 /* XCRemoteSwiftPackageReference "OAuthSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OAuthSwift/OAuthSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+		14476F1A28FD2282003EC34B /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ninjaprox/NVActivityIndicatorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		1438206528FC31F30074D326 /* TweetCounterUtilities */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -594,6 +753,16 @@
 		1438206928FC32E80074D326 /* TweetCounterUIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TweetCounterUIComponents;
+		};
+		1438207528FC66D30074D326 /* OAuthSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1438207428FC66D30074D326 /* XCRemoteSwiftPackageReference "OAuthSwift" */;
+			productName = OAuthSwift;
+		};
+		14476F1B28FD2282003EC34B /* NVActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14476F1A28FD2282003EC34B /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */;
+			productName = NVActivityIndicatorView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

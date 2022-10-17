@@ -13,6 +13,7 @@ class TweetCounterViewModel {
     // MARK: Input
     struct Input {
         let tweetText: AnyObserver<String?>
+        let isTextViewEnabled: AnyObserver<Bool>
     }
     
     // MARK: Output
@@ -24,6 +25,7 @@ class TweetCounterViewModel {
         let playErrorFeedback: Driver<Void>
         let shakeLabels: Driver<Void>
         let textViewPlaceholder: Driver<String>
+        let isTextViewEnabled: Driver<Bool>
     }
 
     // MARK: - Private properties
@@ -39,6 +41,7 @@ class TweetCounterViewModel {
     private let playErrorFeedback: PublishRelay<Void> = PublishRelay<Void>()
     private let shakeLabels: PublishRelay<Void> = PublishRelay<Void>()
     private let textViewPlaceholder: BehaviorRelay<String> = BehaviorRelay<String>(value: "")
+    private let isTextViewEnabled: PublishSubject<Bool> = PublishSubject<Bool>()
     
     // MARK: Public properties
     var input: Input
@@ -47,14 +50,16 @@ class TweetCounterViewModel {
     
     init(tweetCounterManager: TweetCounterManagerProtocol) {
         self.tweetCounterManager = tweetCounterManager
-        input = Input(tweetText: tweetText.asObserver())
+        input = Input(tweetText: tweetText.asObserver(),
+                      isTextViewEnabled: isTextViewEnabled.asObserver())
         output = Output(tweetText: tweetText.asDriver(onErrorJustReturn: nil),
                         typedCharacters: typedCharacters.asDriver(onErrorJustReturn: ""),
                         remainingCharacters: remainingCharacters.asDriver(onErrorJustReturn: ""),
                         warningStateOn: warningStateOn.asDriver(onErrorJustReturn: false),
                         playErrorFeedback: playErrorFeedback.asDriver(onErrorJustReturn: ()),
                         shakeLabels: shakeLabels.asDriver(onErrorJustReturn: ()),
-                        textViewPlaceholder: textViewPlaceholder.asDriver())
+                        textViewPlaceholder: textViewPlaceholder.asDriver(),
+                        isTextViewEnabled: isTextViewEnabled.asDriver(onErrorJustReturn: false))
         bindViewModel()
     }
     

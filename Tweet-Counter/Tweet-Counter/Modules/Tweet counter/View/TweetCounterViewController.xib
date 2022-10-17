@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArbFONTS-DINNextLTArabic-Bold-2.ttf">
+            <string>DINNextLTArabic-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TweetCounterViewController" customModule="Tweet_Counter" customModuleProvider="target">
+            <connections>
+                <outlet property="clearTextButton" destination="W9f-ee-cSQ" id="ILq-yx-UgL"/>
+                <outlet property="copyTextButton" destination="pdx-w5-37D" id="5ft-BU-zP1"/>
+                <outlet property="darkModeIconImageView" destination="nXJ-ma-PcA" id="oxu-ur-jT9"/>
+                <outlet property="darkModeSwitch" destination="qtO-yA-mU0" id="kea-7r-0XA"/>
+                <outlet property="loader" destination="ky0-9B-AqV" id="0xd-UE-Cpd"/>
+                <outlet property="postTweetButton" destination="Mxt-nL-B0Z" id="h19-dW-X5X"/>
+                <outlet property="tweetCounterView" destination="EVk-dn-TGI" id="3hO-Bq-Hol"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="500"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="2TP-SA-YFn" customClass="TPKeyboardAvoidingScrollView">
+                    <rect key="frame" x="0.0" y="59" width="393" height="441"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XN7-8S-xrg" userLabel="Container View">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="695"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8gv-ql-fm0">
+                                    <rect key="frame" x="166.66666666666666" y="30" width="60" height="49"/>
+                                    <color key="tintColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="49" id="9M1-er-txs"/>
+                                        <constraint firstAttribute="width" constant="60" id="gOa-qA-XMe"/>
+                                    </constraints>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVk-dn-TGI" customClass="TweetCounterView" customModule="TweetCounterUIComponents">
+                                    <rect key="frame" x="0.0" y="101" width="393" height="250"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9f-ee-cSQ">
+                                    <rect key="frame" x="283" y="375" width="94" height="40"/>
+                                    <color key="backgroundColor" red="0.86274509803921573" green="0.0039215686274509803" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="94" id="DkF-Pw-VsL"/>
+                                        <constraint firstAttribute="height" constant="40" id="ODu-o5-uMq"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="DINNextLTArabic-Bold" family="DIN Next LT Arabic" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Clear Text">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapClearTextButton:" destination="-1" eventType="touchUpInside" id="YS8-By-D9z"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxt-nL-B0Z">
+                                    <rect key="frame" x="16" y="439" width="361" height="56"/>
+                                    <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="USG-mI-a0o"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="DINNextLTArabic-Bold" family="DIN Next LT Arabic" pointSize="18"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Post tweet">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapPostTweetButton:" destination="-1" eventType="touchUpInside" id="mBY-Il-mFh"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdx-w5-37D">
+                                    <rect key="frame" x="16" y="375" width="94" height="40"/>
+                                    <color key="backgroundColor" red="0.0" green="0.66274509803921566" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="94" id="Coc-yU-nZC"/>
+                                        <constraint firstAttribute="height" constant="40" id="bRc-VO-Fws"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="DINNextLTArabic-Bold" family="DIN Next LT Arabic" pointSize="14"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" title="Copy Text">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didTapCopyTextButton:" destination="-1" eventType="touchUpInside" id="mNR-f3-ynH"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChQ-a5-lXd">
+                                    <rect key="frame" x="16" y="535" width="361" height="60"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkModeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="nXJ-ma-PcA">
+                                            <rect key="frame" x="0.0" y="15" width="30" height="30"/>
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="IbL-q3-mpZ"/>
+                                                <constraint firstAttribute="width" constant="30" id="x61-hi-1KQ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-iU-D76" userLabel="Dark Mode">
+                                            <rect key="frame" x="34.999999999999993" y="20" width="106.33333333333331" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="RZR-Bq-ng0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qtO-yA-mU0">
+                                            <rect key="frame" x="312" y="14.666666666666629" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="didToggleDarkMode:" destination="-1" eventType="valueChanged" id="pbl-7O-rkV"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="nXJ-ma-PcA" firstAttribute="leading" secondItem="ChQ-a5-lXd" secondAttribute="leading" id="8b3-bX-v38"/>
+                                        <constraint firstItem="rnj-iU-D76" firstAttribute="leading" secondItem="nXJ-ma-PcA" secondAttribute="trailing" constant="5" id="Ixj-9p-NyF"/>
+                                        <constraint firstAttribute="trailing" secondItem="qtO-yA-mU0" secondAttribute="trailing" id="PwP-eo-TzS"/>
+                                        <constraint firstItem="qtO-yA-mU0" firstAttribute="centerY" secondItem="ChQ-a5-lXd" secondAttribute="centerY" id="bDC-33-bCY"/>
+                                        <constraint firstItem="nXJ-ma-PcA" firstAttribute="centerY" secondItem="ChQ-a5-lXd" secondAttribute="centerY" id="f8a-D8-ruA"/>
+                                        <constraint firstItem="qtO-yA-mU0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rnj-iU-D76" secondAttribute="trailing" constant="10" id="fNK-XI-5bf"/>
+                                        <constraint firstItem="rnj-iU-D76" firstAttribute="centerY" secondItem="ChQ-a5-lXd" secondAttribute="centerY" id="mta-hD-PJB"/>
+                                        <constraint firstAttribute="height" constant="60" id="tp2-IC-xld"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="8gv-ql-fm0" firstAttribute="centerX" secondItem="XN7-8S-xrg" secondAttribute="centerX" id="4Ej-i1-uig"/>
+                                <constraint firstItem="pdx-w5-37D" firstAttribute="top" secondItem="EVk-dn-TGI" secondAttribute="bottom" constant="24" id="5Ji-jn-Rra"/>
+                                <constraint firstItem="EVk-dn-TGI" firstAttribute="leading" secondItem="XN7-8S-xrg" secondAttribute="leading" id="6Gw-vX-31T"/>
+                                <constraint firstAttribute="trailing" secondItem="ChQ-a5-lXd" secondAttribute="trailing" constant="16" id="7jB-hg-zVB"/>
+                                <constraint firstAttribute="bottom" secondItem="ChQ-a5-lXd" secondAttribute="bottom" constant="100" id="9HB-UJ-IX5"/>
+                                <constraint firstAttribute="trailing" secondItem="W9f-ee-cSQ" secondAttribute="trailing" constant="16" id="Ad6-fn-Xwn"/>
+                                <constraint firstItem="ChQ-a5-lXd" firstAttribute="top" secondItem="Mxt-nL-B0Z" secondAttribute="bottom" constant="40" id="COW-sc-kSh"/>
+                                <constraint firstItem="8gv-ql-fm0" firstAttribute="top" secondItem="XN7-8S-xrg" secondAttribute="top" constant="30" id="H4T-0d-Zbc"/>
+                                <constraint firstItem="W9f-ee-cSQ" firstAttribute="top" secondItem="pdx-w5-37D" secondAttribute="top" id="OiY-Q2-N9v"/>
+                                <constraint firstItem="Mxt-nL-B0Z" firstAttribute="top" secondItem="pdx-w5-37D" secondAttribute="bottom" constant="24" id="Qjo-eW-Hgm"/>
+                                <constraint firstItem="Mxt-nL-B0Z" firstAttribute="trailing" secondItem="W9f-ee-cSQ" secondAttribute="trailing" id="XTu-dR-C6R"/>
+                                <constraint firstItem="pdx-w5-37D" firstAttribute="leading" secondItem="XN7-8S-xrg" secondAttribute="leading" constant="16" id="XUw-wo-tSi"/>
+                                <constraint firstAttribute="trailing" secondItem="EVk-dn-TGI" secondAttribute="trailing" id="XqO-VE-Kmb"/>
+                                <constraint firstItem="W9f-ee-cSQ" firstAttribute="bottom" secondItem="pdx-w5-37D" secondAttribute="bottom" id="gJP-vC-9TZ"/>
+                                <constraint firstItem="ChQ-a5-lXd" firstAttribute="leading" secondItem="XN7-8S-xrg" secondAttribute="leading" constant="16" id="lhp-ZE-5eb"/>
+                                <constraint firstItem="W9f-ee-cSQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pdx-w5-37D" secondAttribute="trailing" constant="10" id="qzA-gy-cWt"/>
+                                <constraint firstItem="EVk-dn-TGI" firstAttribute="top" secondItem="8gv-ql-fm0" secondAttribute="bottom" constant="22" id="tGt-9w-Ie3"/>
+                                <constraint firstItem="Mxt-nL-B0Z" firstAttribute="leading" secondItem="pdx-w5-37D" secondAttribute="leading" id="tbo-ll-F9Y"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ky0-9B-AqV" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                            <rect key="frame" x="166.66666666666666" y="190.66666666666666" width="60" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="Tb6-50-GPT"/>
+                                <constraint firstAttribute="height" constant="60" id="WSQ-dn-GNl"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ky0-9B-AqV" firstAttribute="centerX" secondItem="2TP-SA-YFn" secondAttribute="centerX" id="Aqt-xS-X6p"/>
+                        <constraint firstAttribute="trailing" secondItem="XN7-8S-xrg" secondAttribute="trailing" id="D9E-0T-7qB"/>
+                        <constraint firstItem="XN7-8S-xrg" firstAttribute="leading" secondItem="2TP-SA-YFn" secondAttribute="leading" id="MHE-Yw-lqW"/>
+                        <constraint firstItem="XN7-8S-xrg" firstAttribute="width" secondItem="2TP-SA-YFn" secondAttribute="width" id="UNp-Ln-PrR"/>
+                        <constraint firstItem="XN7-8S-xrg" firstAttribute="top" secondItem="2TP-SA-YFn" secondAttribute="top" id="dvG-JH-6da"/>
+                        <constraint firstItem="ky0-9B-AqV" firstAttribute="centerY" secondItem="2TP-SA-YFn" secondAttribute="centerY" id="hvR-dS-yYT"/>
+                        <constraint firstAttribute="bottom" secondItem="XN7-8S-xrg" secondAttribute="bottom" id="wjO-Wd-1qj"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="wUO-nn-8FE"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="LAG-hq-4Rn"/>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="EVk-dn-TGI" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="Uu8-1U-XyZ"/>
+                <constraint firstItem="2TP-SA-YFn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XAh-Fc-LO7"/>
+                <constraint firstAttribute="bottom" secondItem="2TP-SA-YFn" secondAttribute="bottom" id="crR-do-XmD"/>
+                <constraint firstAttribute="trailing" secondItem="2TP-SA-YFn" secondAttribute="trailing" id="dM3-7a-H8B"/>
+                <constraint firstItem="2TP-SA-YFn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ifM-HK-w6N"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="67.938931297709928" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="darkModeIcon" width="170.66667175292969" height="170.66667175292969"/>
+        <image name="twitterLogo" width="60" height="49.333332061767578"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
