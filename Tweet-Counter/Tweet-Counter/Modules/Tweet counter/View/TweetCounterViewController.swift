@@ -31,12 +31,6 @@ class TweetCounterViewController: UIViewController {
         presenter?.viewDidLoad()
     }
     
-    // MARK: UIResponders
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-    
     // MARK: Actions
     @IBAction func didTapCopyTextButton(_ sender: Any) {
         presenter?.didTapCopyTextButton()
