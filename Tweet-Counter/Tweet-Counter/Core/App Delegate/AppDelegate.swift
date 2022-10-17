@@ -7,6 +7,7 @@
 
 import UIKit
 import TweetCounterUIComponents
+import OAuthSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,10 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         TweetCounterUIComponents.shared.initialize()
-        let tweetCounterViewController = TweetCounterViewController()
+        let tweetCounterRootBuilder = TweetCounterRootBuilder()
+        let viewController = tweetCounterRootBuilder.buildModule()
         let window = UIWindow()
-        setUpWindow(window, withRootViewController: tweetCounterViewController)
+        setUpWindow(window, withRootViewController: viewController)
         self.window = window
+        return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey  : Any] = [:]) -> Bool {
+        if url.host == YOUR_CALLBACK_URL_HOST {
+            OAuthSwift.handle(url: url)
+        }
         return true
     }
 }

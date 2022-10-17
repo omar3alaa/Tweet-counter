@@ -21,6 +21,7 @@ public class TweetCounterView: UIView {
     
     // MARK: - Properties
     private let disposeBag = DisposeBag()
+    weak var delegate: TweetCounterDelegate?
     var viewModel: TweetCounterViewModel? {
         didSet {
             bindUI()
@@ -29,7 +30,7 @@ public class TweetCounterView: UIView {
     }
     
     // MARK: Init
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadViewFromNib()
     }
@@ -42,6 +43,14 @@ public class TweetCounterView: UIView {
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
         setupLabelsColors()
+    }
+    
+    public func setDelegate(delegate: TweetCounterDelegate) {
+        self.delegate = delegate
+    }
+    
+    public func clearText() {
+        textView.rx.text.onNext("")
     }
 }
 
@@ -93,6 +102,7 @@ private extension TweetCounterView {
             } else {
                 strongSelf.setupLabelsColors()
             }
+            strongSelf.delegate?.typedCharactersCountChanged(didReachMaximumCharactersCountAllowed: warningStateOn)
         }).disposed(by: disposeBag)
         viewModel?.output.playErrorFeedback.throttle(.seconds(1), latest: false).drive(onNext: { _ in
             let generator = UINotificationFeedbackGenerator()
@@ -110,8 +120,11 @@ private extension TweetCounterView {
     }
     
     func bindViewModel() {
-        guard let viewModel = viewModel else { return }
-        textView.rx.text.asDriver().drive(viewModel.input.tweetText).disposed(by: disposeBag)
+        textView.rx.text.asDriver().drive { [weak self] text in
+            guard let strongSelf = self else { return }
+            strongSelf.viewModel?.input.tweetText.onNext(text)
+            strongSelf.delegate?.didChangeText(newText: text)
+        }.disposed(by: disposeBag)
     }
 }
 

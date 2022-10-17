@@ -8,13 +8,20 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArbFONTS-DINNextLTArabic-Bold-2.ttf">
+            <string>DINNextLTArabic-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TweetCounterViewController" customModule="Tweet_Counter" customModuleProvider="target">
             <connections>
+                <outlet property="clearTextButton" destination="W9f-ee-cSQ" id="ILq-yx-UgL"/>
+                <outlet property="copyTextButton" destination="pdx-w5-37D" id="5ft-BU-zP1"/>
                 <outlet property="darkModeIconImageView" destination="nXJ-ma-PcA" id="oxu-ur-jT9"/>
                 <outlet property="darkModeSwitch" destination="qtO-yA-mU0" id="kea-7r-0XA"/>
+                <outlet property="postTweetButton" destination="Mxt-nL-B0Z" id="h19-dW-X5X"/>
                 <outlet property="tweetCounterView" destination="EVk-dn-TGI" id="3hO-Bq-Hol"/>
-                <outlet property="twitterLogoImageView" destination="8gv-ql-fm0" id="Knp-R2-ALl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,6 +32,7 @@
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitterLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8gv-ql-fm0">
                     <rect key="frame" x="166.66666666666666" y="89" width="60" height="49"/>
+                    <color key="tintColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="49" id="9M1-er-txs"/>
                         <constraint firstAttribute="width" constant="60" id="gOa-qA-XMe"/>
@@ -34,8 +42,70 @@
                     <rect key="frame" x="0.0" y="160" width="393" height="426"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdx-w5-37D">
+                    <rect key="frame" x="16" y="610" width="94" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.66274509803921566" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="94" id="Coc-yU-nZC"/>
+                        <constraint firstAttribute="height" constant="40" id="bRc-VO-Fws"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DINNextLTArabic-Bold" family="DIN Next LT Arabic" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Copy Text">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapCopyTextButton:" destination="-1" eventType="touchUpInside" id="mNR-f3-ynH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W9f-ee-cSQ">
+                    <rect key="frame" x="283" y="610" width="94" height="40"/>
+                    <color key="backgroundColor" red="0.86274509803921573" green="0.0039215686274509803" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="94" id="DkF-Pw-VsL"/>
+                        <constraint firstAttribute="height" constant="40" id="ODu-o5-uMq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DINNextLTArabic-Bold" family="DIN Next LT Arabic" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Clear Text">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapClearTextButton:" destination="-1" eventType="touchUpInside" id="YS8-By-D9z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mxt-nL-B0Z">
+                    <rect key="frame" x="16" y="674" width="361" height="56"/>
+                    <color key="backgroundColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="USG-mI-a0o"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DINNextLTArabic-Bold" family="DIN Next LT Arabic" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Post tweet">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapPostTweetButton:" destination="-1" eventType="touchUpInside" id="mBY-Il-mFh"/>
+                    </connections>
+                </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChQ-a5-lXd">
-                    <rect key="frame" x="16" y="738" width="361" height="60"/>
+                    <rect key="frame" x="16" y="753" width="361" height="60"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkModeIcon" translatesAutoresizingMaskIntoConstraints="NO" id="nXJ-ma-PcA">
                             <rect key="frame" x="0.0" y="15" width="30" height="30"/>
@@ -46,11 +116,11 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnj-iU-D76" userLabel="Dark Mode">
-                            <rect key="frame" x="34.999999999999993" y="20" width="126.33333333333331" height="20"/>
+                            <rect key="frame" x="34.999999999999993" y="20" width="106.33333333333331" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="RZR-Bq-ng0"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -77,14 +147,23 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="pdx-w5-37D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="2Wh-tb-KN1"/>
                 <constraint firstAttribute="trailing" secondItem="ChQ-a5-lXd" secondAttribute="trailing" constant="16" id="5sS-Sd-IUt"/>
                 <constraint firstItem="8gv-ql-fm0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="Auu-zz-bE1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mxt-nL-B0Z" secondAttribute="trailing" constant="16" id="Doa-nI-XG4"/>
+                <constraint firstItem="W9f-ee-cSQ" firstAttribute="bottom" secondItem="pdx-w5-37D" secondAttribute="bottom" id="Gw6-h3-dvf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EVk-dn-TGI" secondAttribute="trailing" id="IIw-gV-cvt"/>
                 <constraint firstItem="EVk-dn-TGI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Iyp-Up-B8j"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ChQ-a5-lXd" secondAttribute="bottom" constant="20" id="Sh4-Yw-lpn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="W9f-ee-cSQ" secondAttribute="trailing" constant="16" id="K7S-ae-XUa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ChQ-a5-lXd" secondAttribute="bottom" constant="5" id="Sh4-Yw-lpn"/>
+                <constraint firstItem="Mxt-nL-B0Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="UQJ-e0-xuL"/>
                 <constraint firstItem="ChQ-a5-lXd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VNb-54-ctn"/>
+                <constraint firstItem="Mxt-nL-B0Z" firstAttribute="top" secondItem="pdx-w5-37D" secondAttribute="bottom" constant="24" id="acE-JC-2xO"/>
                 <constraint firstItem="8gv-ql-fm0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mCg-Wi-Nb5"/>
+                <constraint firstItem="W9f-ee-cSQ" firstAttribute="top" secondItem="pdx-w5-37D" secondAttribute="top" id="sqa-Ke-tPj"/>
+                <constraint firstItem="ChQ-a5-lXd" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Mxt-nL-B0Z" secondAttribute="bottom" constant="10" id="vaG-6t-WDo"/>
                 <constraint firstItem="EVk-dn-TGI" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="z7r-bg-MzS"/>
+                <constraint firstItem="pdx-w5-37D" firstAttribute="top" secondItem="EVk-dn-TGI" secondAttribute="bottom" constant="24" id="zAm-cq-40I"/>
                 <constraint firstItem="EVk-dn-TGI" firstAttribute="top" secondItem="8gv-ql-fm0" secondAttribute="bottom" constant="22" id="zVW-NU-Scb"/>
             </constraints>
             <point key="canvasLocation" x="67.938931297709928" y="20.422535211267608"/>
