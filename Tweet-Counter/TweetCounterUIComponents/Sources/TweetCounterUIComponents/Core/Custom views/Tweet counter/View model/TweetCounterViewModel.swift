@@ -23,8 +23,8 @@ class TweetCounterViewModel {
     let typedCharacters: Driver<String>
     let remainingCharacters: Driver<String>
     let warningStateOn: Driver<Bool>
-    let playErrorFeedback: Driver<Void>
-    let shakeLabels: Driver<Void>
+    let playErrorFeedback: Driver<Bool>
+    let shakeLabels: Driver<Bool>
     let textViewPlaceholder: Driver<String>
     
     // MARK: Private
@@ -41,8 +41,13 @@ class TweetCounterViewModel {
             return charactersCount > maxCount
         }
         warningStateOn = textExceededMaximumCharactersCountAllowed.asDriver(onErrorJustReturn: false)
-        let isTypingAfterExceedingLimit = textExceededMaximumCharactersCountAllowed.filter({ $0 }).map({ _ in ()}).share(replay: 1).asDriver(onErrorJustReturn: ())
-        
+        let isTypingAfterExceedingLimit = textExceededMaximumCharactersCountAllowed.filter ({ $0 }).withLatestFrom(textCount.withPrevious()) { _, textsCounts in
+            let currentTextCount = textsCounts.1
+            if let previousTextCount = textsCounts.0, currentTextCount > previousTextCount {
+                return true
+            }
+            return false
+        }.share(replay: 1).asDriver(onErrorJustReturn: false)
         playErrorFeedback = isTypingAfterExceedingLimit
         shakeLabels = isTypingAfterExceedingLimit
         typedCharacters = textCount.withLatestFrom(maximumCharactersAllowed, resultSelector: {

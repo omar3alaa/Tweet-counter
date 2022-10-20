@@ -109,11 +109,11 @@ private extension TweetCounterView {
                 strongSelf.setupLabelsColors()
             }
         }).disposed(by: disposeBag)
-        viewModel.playErrorFeedback.throttle(.seconds(1), latest: false).drive(onNext: { _ in
+        viewModel.playErrorFeedback.filter( { return $0 }).throttle(.seconds(1), latest: false).drive(onNext: { _ in
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.error)
         }).disposed(by: disposeBag)
-        viewModel.shakeLabels.throttle(.seconds(1), latest: false).drive(onNext: { [weak self] _ in
+        viewModel.shakeLabels.filter( { return $0 }).throttle(.seconds(1), latest: false).drive(onNext: { [weak self] _ in
             guard let strongSelf = self else { return }
             strongSelf.remainingCharactersLabel.shake(duration: 1)
             strongSelf.typedCharactersLabel.shake(duration: 1)
