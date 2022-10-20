@@ -21,8 +21,8 @@ A SPM used to encapsulate all helpers, extensions, and any shared logic that cou
 
 ### Resources I've used to help me implement this repo
 * [How Twitter counts characters.](https://developer.twitter.com/en/docs/counting-characters )
-* [Twitter configuration file.](https://github.com/twitter/twitter-text/blob/master/config/v3.json)
-* [For understanding regex.](https://www.thisdot.co/blog/understanding-regex#fn-1)
+* [Twitter's latest configuration file.](https://github.com/twitter/twitter-text/blob/master/config/v3.json)
+* [For understanding regex.](https://www.thisdot.co/blog/understanding-regex)
 * [For regex checks.](https://regexr.com/3e48o)
 * [Swift twitter-text repo.](https://github.com/nysander/twitter-text)
 * [To create local swift package manager.](https://useyourloaf.com/blog/creating-swift-packages-in-xcode/)
