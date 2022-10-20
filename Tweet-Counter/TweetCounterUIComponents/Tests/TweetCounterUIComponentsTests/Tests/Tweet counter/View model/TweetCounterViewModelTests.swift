@@ -3,14 +3,12 @@ import XCTest
 import RxSwift
 
 let MAXIMUM_CHARACTERS_ALLOWED = 20
-final class TweetCounterUIComponentsTests: XCTestCase {
+final class TweetCounterViewModelTests: XCTestCase {
     var viewModel: TweetCounterViewModel!
-    var scheduler: ConcurrentDispatchQueueScheduler!
     
     override func setUp() {
         super.setUp()
         viewModel = TweetCounterViewModel(tweetCounterManager: MockTweetCountManager())
-        scheduler = ConcurrentDispatchQueueScheduler(qos: .default)
     }
     
     func testMaximumCharactersAllowed() {
