@@ -15,8 +15,8 @@ let package = Package(
             targets: ["TweetCounterUIComponents"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.5.0"),
-        .package(name: "TweetCounterUtilities", path: "../TweetCounterUtilities")
+        .package(name: "TweetCounterUtilities", path: "../TweetCounterUtilities"),
+        .package(url: "https://github.com/ReactiveX/RxSwift.git", from: "6.5.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -28,7 +28,8 @@ let package = Package(
                            .product(name: "RxCocoa", package: "RxSwift")],
             resources: [
                 .process("Resources"),
-                .process("Core/Custom views/Tweet counter/Views/TweetCounterView.xib")
+                .process("Core/Custom views/Tweet counter/Views/TweetCounterView.xib"),
+                .process("Core/Helpers/Views/Toast/Toast.xib")
             ]),
         .testTarget(
             name: "TweetCounterUIComponentsTests",

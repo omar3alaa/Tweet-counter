@@ -8,6 +8,5 @@
 import Foundation
 
 public protocol TweetCounterDelegate: AnyObject {
-    func didChangeText(newText: String?)
-    func warningStateChanged(isWarningStateOn: Bool)
+    func didChangeText(newText: String?, isWarningStateOn: Bool)
 }

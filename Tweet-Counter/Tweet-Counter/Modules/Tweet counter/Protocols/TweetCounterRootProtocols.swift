@@ -24,11 +24,10 @@ protocol TweetCounterRootViewProtocol: AnyObject {
 
 protocol TweetCounterRootPresenterProtocol {
     func viewDidLoad()
-    func didChangeText(newText: String?)
+    func didChangeText(newText: String?, isWarningStateOn: Bool)
     func didTapCopyTextButton()
     func didTapClearTextButton()
     func didTapPostTweetButton()
-    func warningStateChanged(isWarningStateOn: Bool)
 }
 
 protocol AuthorizeTwitterInteractorProtocol {

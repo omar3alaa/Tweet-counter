@@ -10,80 +10,52 @@ import RxSwift
 import RxCocoa
 
 class TweetCounterViewModel {
-    // MARK: Input
-    struct Input {
-        let tweetText: AnyObserver<String?>
-        let isTextViewEnabled: AnyObserver<Bool>
-    }
     
-    // MARK: Output
-    struct Output {
-        let tweetText: Driver<String?>
-        let typedCharacters: Driver<String>
-        let remainingCharacters: Driver<String>
-        let warningStateOn: Driver<Bool>
-        let playErrorFeedback: Driver<Void>
-        let shakeLabels: Driver<Void>
-        let textViewPlaceholder: Driver<String>
-        let isTextViewEnabled: Driver<Bool>
-    }
-
     // MARK: - Private properties
     private let tweetCounterManager: TweetCounterManagerProtocol
     private let disposeBag = DisposeBag()
-    private var previousCount = 0
     
-    // MARK: - Private output properties
-    private let tweetText: PublishSubject<String?> = PublishSubject<String?>()
-    private let typedCharacters: PublishRelay<String> = PublishRelay<String>()
-    private let remainingCharacters: PublishRelay<String> = PublishRelay<String>()
-    private let warningStateOn: PublishRelay<Bool> = PublishRelay<Bool>()
-    private let playErrorFeedback: PublishRelay<Void> = PublishRelay<Void>()
-    private let shakeLabels: PublishRelay<Void> = PublishRelay<Void>()
-    private let textViewPlaceholder: BehaviorRelay<String> = BehaviorRelay<String>(value: "")
-    private let isTextViewEnabled: PublishSubject<Bool> = PublishSubject<Bool>()
+    // MARK: -  Input
+    let tweetText: PublishSubject<String?> = PublishSubject<String?>()
+    let isTextViewEnabled: PublishSubject<Bool> = PublishSubject<Bool>()
+
+    // MARK: Output
+    let typedCharacters: Driver<String>
+    let remainingCharacters: Driver<String>
+    let warningStateOn: Driver<Bool>
+    let playErrorFeedback: Driver<Bool>
+    let shakeLabels: Driver<Bool>
+    let textViewPlaceholder: Driver<String>
     
-    // MARK: Public properties
-    var input: Input
-    var output: Output
-    
+    // MARK: Private
+    let maximumCharactersAllowed: BehaviorRelay<Int>
     
     init(tweetCounterManager: TweetCounterManagerProtocol) {
         self.tweetCounterManager = tweetCounterManager
-        input = Input(tweetText: tweetText.asObserver(),
-                      isTextViewEnabled: isTextViewEnabled.asObserver())
-        output = Output(tweetText: tweetText.asDriver(onErrorJustReturn: nil),
-                        typedCharacters: typedCharacters.asDriver(onErrorJustReturn: ""),
-                        remainingCharacters: remainingCharacters.asDriver(onErrorJustReturn: ""),
-                        warningStateOn: warningStateOn.asDriver(onErrorJustReturn: false),
-                        playErrorFeedback: playErrorFeedback.asDriver(onErrorJustReturn: ()),
-                        shakeLabels: shakeLabels.asDriver(onErrorJustReturn: ()),
-                        textViewPlaceholder: textViewPlaceholder.asDriver(),
-                        isTextViewEnabled: isTextViewEnabled.asDriver(onErrorJustReturn: false))
-        bindViewModel()
-    }
-    
-    func bindViewModel() {
-        let maximumCharactersAllowed = tweetCounterManager.maximumChractersAllowed
-        textViewPlaceholder.accept("Start typing! You can enter up to \(maximumCharactersAllowed) characters")
-        let count = tweetText.unwrap().map(tweetCounterManager.getTweetCountFor(tweet:)).share(replay: 1)
-        
-        count.bind { [weak self] count in
-            guard let strongSelf = self else { return }
-            if count > maximumCharactersAllowed {
-                strongSelf.warningStateOn.accept(true)
-                // This code made to check if the user is still writing after being warned that he/she exceeded the characters limit, if yes, then create some error feedback haptic and make labels animate with shaking effect
-                if count > strongSelf.previousCount {
-                    strongSelf.playErrorFeedback.accept(())
-                    strongSelf.shakeLabels.accept(())
-                }
-            } else {
-                strongSelf.warningStateOn.accept(false)
+        self.maximumCharactersAllowed = BehaviorRelay<Int>(value: tweetCounterManager.maximumChractersAllowed)
+        self.textViewPlaceholder = maximumCharactersAllowed.map({ maxCount in
+            "Start typing! You can enter up to \(maxCount) characters"
+        }).asDriver(onErrorJustReturn: "")
+        let textCount = self.tweetText.unwrap().map(tweetCounterManager.getTweetCountFor(tweet:)).share(replay: 1)
+        let textExceededMaximumCharactersCountAllowed = textCount.withLatestFrom(maximumCharactersAllowed) { charactersCount, maxCount in
+            return charactersCount > maxCount
+        }
+        warningStateOn = textExceededMaximumCharactersCountAllowed.asDriver(onErrorJustReturn: false)
+        let isTypingAfterExceedingLimit = textExceededMaximumCharactersCountAllowed.filter ({ $0 }).withLatestFrom(textCount.withPrevious()) { _, textsCounts in
+            let currentTextCount = textsCounts.1
+            if let previousTextCount = textsCounts.0, currentTextCount > previousTextCount {
+                return true
             }
-            strongSelf.typedCharacters.accept("\(count)/\(maximumCharactersAllowed)")
-            strongSelf.remainingCharacters.accept("\(maximumCharactersAllowed - count)")
-            strongSelf.previousCount = count
-        }.disposed(by: disposeBag)
+            return false
+        }.share(replay: 1).asDriver(onErrorJustReturn: false)
+        playErrorFeedback = isTypingAfterExceedingLimit
+        shakeLabels = isTypingAfterExceedingLimit
+        typedCharacters = textCount.withLatestFrom(maximumCharactersAllowed, resultSelector: {
+            "\($0)/\($1)"
+        }).asDriver(onErrorJustReturn: "")
+        remainingCharacters = textCount.withLatestFrom(maximumCharactersAllowed, resultSelector: {
+            "\($1 - $0)"
+        }).asDriver(onErrorJustReturn: "")
     }
 }
 

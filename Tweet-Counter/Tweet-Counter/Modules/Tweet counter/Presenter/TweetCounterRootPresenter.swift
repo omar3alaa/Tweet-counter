@@ -27,14 +27,20 @@ class TweetCounterRootPresenter: TweetCounterRootPresenterProtocol {
         setupViewInitialState()
     }
     
-    func didChangeText(newText: String?) {
+    func didChangeText(newText: String?, isWarningStateOn: Bool) {
         text = newText
         if let newText = newText, !newText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             view?.toggleCopyTextButtonEnablement(isEnabled: true)
             view?.toggleClearTextButtonEnablement(isEnabled: true)
+            if isWarningStateOn {
+                view?.togglePostTweetButtonEnablement(isEnabled: false)
+            } else {
+                view?.togglePostTweetButtonEnablement(isEnabled: true)
+            }
         } else {
             view?.toggleCopyTextButtonEnablement(isEnabled: false)
             view?.toggleClearTextButtonEnablement(isEnabled: false)
+            view?.togglePostTweetButtonEnablement(isEnabled: false)
         }
     }
     
@@ -54,18 +60,6 @@ class TweetCounterRootPresenter: TweetCounterRootPresenterProtocol {
     func didTapPostTweetButton() {
         setupViewUponLoadingState()
         authorizeTwitterInteractor.authorizeTwitter()
-    }
-    
-    func warningStateChanged(isWarningStateOn: Bool) {
-        guard let text = text else {
-            view?.togglePostTweetButtonEnablement(isEnabled: false)
-            return
-        }
-        if isWarningStateOn || text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            view?.togglePostTweetButtonEnablement(isEnabled: false)
-        } else {
-            view?.togglePostTweetButtonEnablement(isEnabled: true)
-        }
     }
 }
 

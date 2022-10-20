@@ -54,7 +54,7 @@ public class TweetCounterView: UIView {
     }
     
     public func toggleTextViewEnablement(isEnabled: Bool) {
-        viewModel?.input.isTextViewEnabled.onNext(isEnabled)
+        viewModel?.isTextViewEnabled.onNext(isEnabled)
     }
 }
 
@@ -94,11 +94,12 @@ private extension TweetCounterView {
     }
     
     func bindUI() {
-        viewModel?.output.remainingCharacters.drive(remainingCharactersLabel.rx.text).disposed(by: disposeBag)
-        viewModel?.output.typedCharacters.drive(typedCharactersLabel.rx.text).disposed(by: disposeBag)
-        viewModel?.output.tweetText.drive(textView.rx.text).disposed(by: disposeBag)
-        viewModel?.output.isTextViewEnabled.drive(textView.rx.isUserInteractionEnabled).disposed(by: disposeBag)
-        viewModel?.output.warningStateOn.drive(onNext: { [weak self] warningStateOn in
+        guard let viewModel = viewModel else { return }
+        viewModel.remainingCharacters.drive(remainingCharactersLabel.rx.text).disposed(by: disposeBag)
+        viewModel.typedCharacters.drive(typedCharactersLabel.rx.text).disposed(by: disposeBag)
+        viewModel.tweetText.asDriver(onErrorJustReturn: nil).drive(textView.rx.text).disposed(by: disposeBag)
+        viewModel.isTextViewEnabled.asDriver(onErrorJustReturn: false).drive(textView.rx.isUserInteractionEnabled).disposed(by: disposeBag)
+        viewModel.warningStateOn.drive(onNext: { [weak self] warningStateOn in
             guard let strongSelf = self else { return }
             if warningStateOn {
                 let color: UIColor = .red
@@ -107,29 +108,39 @@ private extension TweetCounterView {
             } else {
                 strongSelf.setupLabelsColors()
             }
-            strongSelf.delegate?.warningStateChanged(isWarningStateOn: warningStateOn)
         }).disposed(by: disposeBag)
-        viewModel?.output.playErrorFeedback.throttle(.seconds(1), latest: false).drive(onNext: { _ in
+        viewModel.playErrorFeedback.filter( { return $0 }).throttle(.seconds(1), latest: false).drive(onNext: { _ in
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(.error)
         }).disposed(by: disposeBag)
-        viewModel?.output.shakeLabels.throttle(.seconds(1), latest: false).drive(onNext: { [weak self] _ in
+        viewModel.shakeLabels.filter( { return $0 }).throttle(.seconds(1), latest: false).drive(onNext: { [weak self] _ in
             guard let strongSelf = self else { return }
             strongSelf.remainingCharactersLabel.shake(duration: 1)
             strongSelf.typedCharactersLabel.shake(duration: 1)
         }).disposed(by: disposeBag)
-        viewModel?.output.textViewPlaceholder.drive(onNext: { [weak self] placeholder in
+        viewModel.textViewPlaceholder.drive(onNext: { [weak self] placeholder in
             guard let strongSelf = self else { return }
             strongSelf.textView.placeholder = placeholder
         }).disposed(by: disposeBag)
     }
     
     func bindViewModel() {
+        guard let viewModel = viewModel else { return }
         textView.rx.text.asDriver().drive { [weak self] text in
             guard let strongSelf = self else { return }
-            strongSelf.viewModel?.input.tweetText.onNext(text)
-            strongSelf.delegate?.didChangeText(newText: text)
+            strongSelf.viewModel?.tweetText.onNext(text)
         }.disposed(by: disposeBag)
+        
+        let textChangeWithWarningState = viewModel.tweetText.withLatestFrom(viewModel.warningStateOn) { isWarningStateOn, text in
+            return (isWarningStateOn, text)
+        }
+        textChangeWithWarningState.asDriver(onErrorJustReturn: (nil, false))
+            .drive(onNext: { [weak self] textWithWarningOn in
+                guard let strongSelf = self else { return }
+                let text = textWithWarningOn.0
+                let isWarningStateOn = textWithWarningOn.1
+                strongSelf.delegate?.didChangeText(newText: text, isWarningStateOn: isWarningStateOn)
+            }).disposed(by: disposeBag)
     }
 }
 
