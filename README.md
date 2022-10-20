@@ -25,6 +25,8 @@ A SPM used to encapsulate all helpers, extensions, and any shared logic that cou
 * [For understanding regex.](https://www.thisdot.co/blog/understanding-regex)
 * [For regex checks.](https://regexr.com/3e48o)
 * [Swift twitter-text repo.](https://github.com/nysander/twitter-text)
+* [Advanced iOS App Architecture book](https://www.raywenderlich.com/books/advanced-ios-app-architecture/v4.0)
+* [RxSwift: Reactive Programming with Swift book](https://www.raywenderlich.com/books/rxswift-reactive-programming-with-swift/v4.0)
 * [To create local swift package manager.](https://useyourloaf.com/blog/creating-swift-packages-in-xcode/)
 * [For testing RxSwift](https://www.raywenderlich.com/7408-testing-your-rxswift-code)
 
