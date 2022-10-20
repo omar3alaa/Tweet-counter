@@ -19,7 +19,7 @@ A SPM used to encapsulate all UI components inside one package to be used by man
 A SPM used to encapsulate all helpers, extensions, and any shared logic that could be used in multiple projects.
 
 
-### Resources I've used to help me implement this repo
+## Resources I've used to help me implement this repo
 * [How Twitter counts characters.](https://developer.twitter.com/en/docs/counting-characters )
 * [Twitter's latest configuration file.](https://github.com/twitter/twitter-text/blob/master/config/v3.json)
 * [For understanding regex.](https://www.thisdot.co/blog/understanding-regex)
